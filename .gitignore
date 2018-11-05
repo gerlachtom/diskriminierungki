@@ -36,6 +36,6 @@ vignettes/*.pdf
 rsconnect/
 .Rproj.user
 
-# Soll laut Dozenten hinzugefügt werden:
+# Soll laut Dozenten hinzugefügt werden für den Datenschutz:
 data
 .DS_Store
