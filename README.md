@@ -3,12 +3,12 @@ Kleingruppe zum Forschungsthema "Diskriminierung durch Künstliche Intelligenz"
 
 Forschungsfrage: "Welche Diskriminierungspotentiale sehen Nutzer bei der KI-gestützten Auswahl von Werbung in sozialen Netzwerken?"
 
-**Mitglieder**
-Insa Menzel
-Leonie Düttmann
-Nathalie Meissner
-Julia May
-Tom Gerlach
+**Mitglieder:** <br>
+Insa Menzel <br>
+Leonie Düttmann <br>
+Nathalie Meissner <br>
+Julia May <br>
+Tom Gerlach 
 
-**Faktorenraum**
+# Faktorenraum
 ![tooltip](images/Faktorenraum.png)
