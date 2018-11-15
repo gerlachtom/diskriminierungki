@@ -17,3 +17,8 @@ Tom Gerlach
 7.11: Protokollordner erstellt
 
 #Thinking Hats: Optimierung der Messinstrumente
+HUT1: Die Reihenfolge der Fragen passt und baut logisch aufeinander auf.
+      Änderung der Reihenfolge der Items bei der letzten Frage zum Thema Bewertung von Inhalten:
+      Umtausch der Items "Ich bevorzuge geschlechtsneutrale Werbung" und "Mich stört, dass mir
+      bestimmte Werbebeiträge aufgrund meines Geschlechts vorenthalten werden", um evtl.
+      Positionseffekte zu vermeiden
