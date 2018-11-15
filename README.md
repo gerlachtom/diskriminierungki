@@ -31,3 +31,8 @@ HUT3 (Inhaltsebene):
 HUT5 (Konzeption Selbstauskunftsskala):
 1. Frage: "Unterscheiden sich von Werbebeiträgen, die meinen Freunden angezeigt werden" --> misst nicht wirklich das, was es messen soll. Man weiß nicht automatisch, was den Freunden angezeigt wird. Ändern oder löschen. 
 Letzte Frage: Begriff "geschlechtsneutrale Werbung" --> was heißt geschlechtsneutral? --> Unwissen steht nicht für Validität und Repräsentativität, Begriff misst evtl. nicht das, was es messen soll
+
+
+HUT4 (Effizienz)
+1. Frage: siehe HUT5, nicht effizient. Schwierig zu beantworten, daher unnötig.
+2. Frage: Werbebeiträge werden als geschlechterbezogen oder klischeehaft empfunden, zu ähnlich? Vielleicht eins rausnehmen, da die Antworten immer gleich bei beiden lauten werden
