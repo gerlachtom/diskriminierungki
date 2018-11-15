@@ -26,3 +26,8 @@ HUT1: Die Reihenfolge der Fragen passt und baut logisch aufeinander auf.
 HUT3 (Inhaltsebene): 
 1. Frage: Antwortmöglichkeit "sind mir noch nie aufgefallen" ergänzt.  --> Frage 1 ist eines der wichtigsten Konstrukte und die Grundlage für alle weiteren Fragen. Deshalb sollte hier nochmal genauer gemessen werden mithilfe der zusätzlichen Antwortmöglichkeit
 3. Frage: Antwortmöglichkeit "erleichtern es mir passende Produkte zu finden." --> durch dieses Item wird nochmals genauer geprüft inwieweit der Studienteilnehmer Targeting wahrnimmt bzw. es sogar nutzt.Enorm wichtig für die darauffolgende Frage.
+
+
+HUT5 (Konzeption Selbstauskunftsskala):
+1. Frage: "Unterscheiden sich von Werbebeiträgen, die meinen Freunden angezeigt werden" --> misst nicht wirklich das, was es messen soll. Man weiß nicht automatisch, was den Freunden angezeigt wird. Ändern oder löschen. 
+Letzte Frage: Begriff "geschlechtsneutrale Werbung" --> was heißt geschlechtsneutral? --> Unwissen steht nicht für Validität und Repräsentativität, Begriff misst evtl. nicht das, was es messen soll
