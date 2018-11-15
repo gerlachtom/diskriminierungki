@@ -15,3 +15,5 @@ Tom Gerlach
 
 # Änderung
 7.11: Protokollordner erstellt
+
+#Thinking Hats: Optimierung der Messinstrumente
