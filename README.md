@@ -22,6 +22,9 @@ HUT1: Die Reihenfolge der Fragen passt und baut logisch aufeinander auf.
       Umtausch der Items "Ich bevorzuge geschlechtsneutrale Werbung" und "Mich stört, dass mir
       bestimmte Werbebeiträge aufgrund meines Geschlechts vorenthalten werden", um evtl.
       Positionseffekte zu vermeiden
+      
+HUT2 (Wording):
+Grob angepasst
 
 HUT3 (Inhaltsebene): 
 1. Frage: Antwortmöglichkeit "sind mir noch nie aufgefallen" ergänzt.  --> Frage 1 ist eines der wichtigsten Konstrukte und die Grundlage für alle weiteren Fragen. Deshalb sollte hier nochmal genauer gemessen werden mithilfe der zusätzlichen Antwortmöglichkeit
