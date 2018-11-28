@@ -37,3 +37,14 @@ Letzte Frage: Begriff "geschlechtsneutrale Werbung" --> was heißt geschlechtsne
 HUT4 (Effizienz)
 1. Frage: siehe HUT5, nicht effizient. Schwierig zu beantworten, daher unnötig.
 2. Frage: Werbebeiträge werden als geschlechterbezogen oder klischeehaft empfunden, zu ähnlich? Vielleicht eins rausnehmen, da die Antworten immer gleich bei beiden lauten werden
+
+#Data Cleaning
+28.11.2018
+-Datensatz ist geladen
+-Codebook generiert
+-Variablen umbenannt
+-Zustimmungsskala erstellt
+
+Es fehlt: 
+-Zustimmungsskala den Variablen zuweisen
+-Schlüsselliste erstellen?
