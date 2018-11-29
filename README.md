@@ -18,10 +18,11 @@ Tom Gerlach
 
 # Thinking Hats: Optimierung der Messinstrumente
 HUT1: Die Reihenfolge der Fragen passt und baut logisch aufeinander auf.
-      Änderung der Reihenfolge der Items bei der letzten Frage zum Thema Bewertung von Inhalten:
-      Umtausch der Items "Ich bevorzuge geschlechtsneutrale Werbung" und "Mich stört, dass mir
-      bestimmte Werbebeiträge aufgrund meines Geschlechts vorenthalten werden", um evtl.
-      Positionseffekte zu vermeiden
+Änderung der Reihenfolge der Items bei der letzten Frage zum Thema Bewertung von Inhalten:
+Umtausch der Items "Ich bevorzuge geschlechtsneutrale Werbung" und "Mich stört, dass mir bestimmte Werbebeiträge aufgrund meines Geschlechts vorenthalten werden", um evtl. Positionseffekte zu vermeiden
+      
+HUT2 (Wording):
+Grob angepasst
 
 HUT3 (Inhaltsebene): 
 1. Frage: Antwortmöglichkeit "sind mir noch nie aufgefallen" ergänzt.  --> Frage 1 ist eines der wichtigsten Konstrukte und die Grundlage für alle weiteren Fragen. Deshalb sollte hier nochmal genauer gemessen werden mithilfe der zusätzlichen Antwortmöglichkeit
@@ -37,8 +38,17 @@ HUT4 (Effizienz)
 1. Frage: siehe HUT5, nicht effizient. Schwierig zu beantworten, daher unnötig.
 2. Frage: Werbebeiträge werden als geschlechterbezogen oder klischeehaft empfunden, zu ähnlich? Vielleicht eins rausnehmen, da die Antworten immer gleich bei beiden lauten werden
 
-# Unterschiedshypothesen
-1.	Frauen nehmen geschlechterspezifische Beiträge häufiger wahr als Männer.
-a.	Es besteht ein Unterschied in der Wahrnehmung       geschlechtsspezifischer Beiträge zwischen Männern und Frauen.
-2.	Frauen stehen zielgerichteten/geschlechtsspezifischen/klischeeabbildenden Beiträgen positiver gegenüber als Männer.
-3.	Männer fühlen sich weniger geschlechtsspezifisch diskriminiert als Frauen.
+<<<<<<< HEAD
+
+=======
+#Data Cleaning
+28.11.2018
+-Datensatz ist geladen
+-Codebook generiert
+-Variablen umbenannt
+-Zustimmungsskala erstellt
+
+Es fehlt: 
+-Zustimmungsskala den Variablen zuweisen
+-Schlüsselliste erstellen?
+>>>>>>> 44255797a0488251972bf88bda6dd6e5c27e7e9f
