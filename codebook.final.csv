@@ -1,0 +1,25 @@
+variable;text
+geschlecht;Bitte geben Sie Ihr Geschlecht an. Response
+alter;Bitte geben Sie Ihr Alter in Jahren an. Open-Ended Response
+nutzung;Wie oft nutzen Sie soziale Netzwerke (z.B. Facebook oder Instagram)? Response_4
+wahrnehmung1;Gesponserte Werbebeiträge in meinen sozialen Netzwerken... nehme ich bewusst wahr.
+wahrnehmung2;X108 entsprechen meinen Interessen.
+wahrnehmung3;X109 unterscheiden sich von Werbebeiträgen, die meinen Freunden angezeigt werden.
+wahrnehmung4;X110 sind auf mich abgestimmt.
+wahrnehmung5;X111 sind mir noch nie aufgefallen.
+einordnung1;Gesponserte Werbebeiträge in meinen sozialen Netzwerken..._1 stecken mich in eine bestimmte Schublade.
+einordnung2;X113 sind auf mein Geschlecht bezogen.
+einordnung3;X114 bilden Klischees ab.
+targeting1;Unter Targeting versteht man die zielgerichtete Adressierung und Anpassung von Inhalten an Individuen auf Grundlage ihrer Online-Aktivitäten, z.B. Gefällt-Mir-Angaben, Google-Suchen, Onlinekäufe.Targeting von Werbebeiträgen in sozialen Netzwerken... finde ich nützlich.
+targeting2;X116 empfinde ich als störend.
+targeting3;X117 finde ich beängstigend.
+targeting4;X118 erleichtern es mir, passende Produkte zu finden.
+genderbezug1;Bitte nehmen Sie Stellung zu folgenden Aussagen: Ich finde es gut, dass sich gesponserte Beiträge auf mein Geschlecht beziehen.
+genderbezug2;X120 Mich stört, dass mir bestimmte Werbebeiträge aufgrund meines Geschlechts vorenthalten werden.
+genderbezug3;X121 Ich bevorzuge geschlechtsneutrale Werbung.
+genderbezug4;X122 Geschlechtsspezifische Klischees empfinde ich als beleidigend.
+diskri1;Gesponserte Werbebeiträge... empfinde ich als geschlechterdiskriminierend.
+diskri2;X124 beurteile ich als geschlechtsneutral.
+diskri3;X125 diskriminieren mich aufgrund meines Geschlechts.
+diskri4;X126 enthalten ein hohes, geschlechtsspezifisches Diskriminierungspotential
+kommentare;Für Ihre Fragen, Anmerkungen oder Feedback: Open-Ended Response_5
