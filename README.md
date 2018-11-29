@@ -52,3 +52,10 @@ Es fehlt:
 -Zustimmungsskala den Variablen zuweisen
 -Schlüsselliste erstellen?
 >>>>>>> 44255797a0488251972bf88bda6dd6e5c27e7e9f
+
+
+# Unterschiedshypothesen
+1.	Frauen nehmen geschlechterspezifische Beiträge häufiger wahr als Männer.
+a.	Es besteht ein Unterschied in der Wahrnehmung       geschlechtsspezifischer Beiträge zwischen Männern und Frauen.
+2.	Frauen stehen zielgerichteten/geschlechtsspezifischen/klischeeabbildenden Beiträgen positiver gegenüber als Männer.
+3.	Männer fühlen sich weniger geschlechtsspezifisch diskriminiert als Frauen.
