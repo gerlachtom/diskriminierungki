@@ -36,3 +36,9 @@ Letzte Frage: Begriff "geschlechtsneutrale Werbung" --> was heißt geschlechtsne
 HUT4 (Effizienz)
 1. Frage: siehe HUT5, nicht effizient. Schwierig zu beantworten, daher unnötig.
 2. Frage: Werbebeiträge werden als geschlechterbezogen oder klischeehaft empfunden, zu ähnlich? Vielleicht eins rausnehmen, da die Antworten immer gleich bei beiden lauten werden
+
+# Unterschiedshypothesen
+1.	Frauen nehmen geschlechterspezifische Beiträge häufiger wahr als Männer.
+a.	Es besteht ein Unterschied in der Wahrnehmung       geschlechtsspezifischer Beiträge zwischen Männern und Frauen.
+2.	Frauen stehen zielgerichteten/geschlechtsspezifischen/klischeeabbildenden Beiträgen positiver gegenüber als Männer.
+3.	Männer fühlen sich weniger geschlechtsspezifisch diskriminiert als Frauen.
