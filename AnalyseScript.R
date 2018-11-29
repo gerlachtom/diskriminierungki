@@ -50,3 +50,10 @@ skala.zustimmung <- c("Stimme gar nicht zu",
                       "Stimme eher zu",
                       "Stimme zu",
                       "Stimme völlig zu")
+
+skala.nutzerfaktoren <- c("Mehrmals täglich",
+                          "Einmal täglich",
+                          "Mehrmals wöchentlich",
+                          "Einmal wöchentlich",
+                          "Seltener als einmal wöchentlich",
+                          "nie")
