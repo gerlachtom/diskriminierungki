@@ -42,6 +42,8 @@ codeb <- read_codebook("codebook_final.csv")
 names(raw.short) <- codeb$variable
 View(raw.short)                       
 
+raw.short$geschlecht <- as.factor(raw.short$geschlecht)
+
 #Faktoren zuweisen ----
 
 skala.zustimmung <- c("Stimme gar nicht zu",
@@ -57,3 +59,59 @@ skala.nutzerfaktoren <- c("Mehrmals täglich",
                           "Einmal wöchentlich",
                           "Seltener als einmal wöchentlich",
                           "nie")
+
+raw.short$nutzung <- ordered(raw.short$nutzung, levels = skala.nutzerfaktoren)
+
+raw.short$wahrnehmung1 <- ordered(raw.short$wahrnehmung1, levels = skala.zustimmung)
+raw.short$wahrnehmung2 <- ordered(raw.short$wahrnehmung2, levels = skala.zustimmung)
+raw.short$wahrnehmung3 <- ordered(raw.short$wahrnehmung3, levels = skala.zustimmung)
+raw.short$wahrnehmung4 <- ordered(raw.short$wahrnehmung4, levels = skala.zustimmung)
+raw.short$wahrnehmung5 <- ordered(raw.short$wahrnehmung5, levels = skala.zustimmung)
+
+raw.short$einordnung1 <- ordered(raw.short$einordnung1, levels =skala.zustimmung)
+raw.short$einordnung2 <- ordered(raw.short$einordnung2, levels =skala.zustimmung)
+raw.short$einordnung3 <- ordered(raw.short$einordnung3, levels =skala.zustimmung)
+
+raw.short$targeting1 <- ordered(raw.short$targeting1, levels = skala.zustimmung)
+raw.short$targeting2 <- ordered(raw.short$targeting2, levels = skala.zustimmung)
+raw.short$targeting3 <- ordered(raw.short$targeting3, levels = skala.zustimmung)
+raw.short$targeting4 <- ordered(raw.short$targeting4, levels = skala.zustimmung)
+
+raw.short$genderbezug1 <- ordered(raw.short$genderbezug1, levels = skala.zustimmung)
+raw.short$genderbezug2 <- ordered(raw.short$genderbezug2, levels = skala.zustimmung)
+raw.short$genderbezug3 <- ordered(raw.short$genderbezug3, levels = skala.zustimmung)
+raw.short$genderbezug4 <- ordered(raw.short$genderbezug4, levels = skala.zustimmung)
+
+raw.short$diskri1 <- ordered(raw.short$diskri1, levels = skala.zustimmung)
+raw.short$diskri2 <- ordered(raw.short$diskri2, levels = skala.zustimmung)
+raw.short$diskri3 <- ordered(raw.short$diskri3, levels = skala.zustimmung)
+raw.short$diskri4 <- ordered(raw.short$diskri4, levels = skala.zustimmung)
+
+
+#### Skalen berechnen
+
+library(psych)
+
+schluesselliste <- list(NUTZUNG = c("nutzung"),
+                        WAHRNEHMUNG = c("wahrnehmung1", "wahrnehmung2", "wahrnehmung3", "wahrnehmung4", "wahrnehmung5"),
+                        EINORDNUNG = c("einordnung1", "einordnung2", "einordnung3"),
+                        TARGETING = c("targeting1", "targeting2", "targeting3", "targeting4"),
+                        GENDERBEZUG = c("genderbezug1", "genderbezug2", "genderbezug3", "genderbezug4"),
+                        DISKRI = c("diskri1", "diskri2", "diskri3", "diskri4")
+                        )
+scores <- scoreItems(schluesselliste, raw.short, missing = TRUE, min = 1, max = 6)
+
+data <- bind_cols(raw.short, as.tibble(scores$scores))
+data <- data %>%
+  select (-starts_with("nutzung", ignore.case = F)) %>%
+  select (-starts_with("wahrnehmung", ignore.case = F)) %>%
+  select (-starts_with("einordnung", ignore.case = F)) %>%
+  select (-starts_with("targeting", ignore.case = F)) %>%
+  select (-starts_with("genderbezug", ignore.case = F)) %>%
+  select (-starts_with("diskri", ignore.case = F))
+
+saveRDS(data, "data/Smart Identification2.rds")
+View(data)
+
+
+          
