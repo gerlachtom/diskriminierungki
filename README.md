@@ -48,9 +48,7 @@ HUT4 (Effizienz)
 -Variablen umbenannt
 -Zustimmungsskala erstellt
 
-Es fehlt: 
--Zustimmungsskala den Variablen zuweisen
--Schlüsselliste erstellen?
+Data Cleaning ist vollständig
 >>>>>>> 44255797a0488251972bf88bda6dd6e5c27e7e9f
 
 
