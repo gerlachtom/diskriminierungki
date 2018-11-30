@@ -58,7 +58,7 @@ skala.nutzerfaktoren <- c("Mehrmals täglich",
                           "Mehrmals wöchentlich",
                           "Einmal wöchentlich",
                           "Seltener als einmal wöchentlich",
-                          "nie")
+                          "Nie")
 
 raw.short$nutzung <- ordered(raw.short$nutzung, levels = skala.nutzerfaktoren)
 
