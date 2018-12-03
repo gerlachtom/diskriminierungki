@@ -28,6 +28,7 @@ filename <- "data/Smart Identification.csv"
 raw <- load_surveymonkey_csv(filename) 
 View(raw)
 
+##### FEEDBACK: Das ginge auch in einer Zeile: raw.short <- raw[-1:-9, usw., usw., ] Dann sind die Zahlen allerdings anders :-) ----
 raw.short1 <- raw [,c(-1:-9)] 
 raw.short2 <- raw.short1 [,c(-3:-14)]
 raw.short <- raw.short2 [,c(-4:-85)]
@@ -112,6 +113,9 @@ data <- data %>%
 
 saveRDS(data, "data/Smart Identification2.rds")
 View(data)
+
+##### FEEDBACK: Gefällt mir eigentlich ganz gut. Die vielen Kontrollausgaben mit View() sollten Sie noch entfernen, das kann schnell irritieren, wenn jemand den ganzen Code auf einmal ausführt. ----
+##### Schauen Sie aber bitte nochmal, welche Nutzerfaktoren aktuell noch im Fragebogen sind, sie haben insgesamt sehr großzügig Spalten entfernt. KUT und den Bildungsstand sollten Sie auf keinen Fall löschen.
 
 
           
