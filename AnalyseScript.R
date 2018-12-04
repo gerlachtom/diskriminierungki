@@ -26,7 +26,6 @@ source("surveymonkey.R")
 #Datensatz laden ----
 filename <- "data/Smart Identification.csv"
 raw <- load_surveymonkey_csv(filename) 
-View(raw)
 
 ##### FEEDBACK: Das ginge auch in einer Zeile: raw.short <- raw[-1:-9, usw., usw., ] Dann sind die Zahlen allerdings anders :-) ----
 raw.short1 <- raw [,c(-1:-9)] 
@@ -37,7 +36,7 @@ raw.short <- raw.short2 [,c(-4:-85)]
 #Codebook einmal generieren, danach ausklammern, sonst überschreibt es sich ----  
 #generate_codebook(raw.short, "codebook.csv")
 
-View(raw.short)
+
 
 codeb <- read_codebook("codebook_final.csv")
 names(raw.short) <- codeb$variable
@@ -112,7 +111,7 @@ data <- data %>%
   select (-starts_with("diskri", ignore.case = F))
 
 saveRDS(data, "data/Smart Identification2.rds")
-View(data)
+
 
 ##### FEEDBACK: Gefällt mir eigentlich ganz gut. Die vielen Kontrollausgaben mit View() sollten Sie noch entfernen, das kann schnell irritieren, wenn jemand den ganzen Code auf einmal ausführt. ----
 ##### Schauen Sie aber bitte nochmal, welche Nutzerfaktoren aktuell noch im Fragebogen sind, sie haben insgesamt sehr großzügig Spalten entfernt. KUT und den Bildungsstand sollten Sie auf keinen Fall löschen.
