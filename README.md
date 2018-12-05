@@ -60,6 +60,6 @@ a.	Es besteht ein Unterschied in der Wahrnehmung       geschlechtsspezifischer B
 
 # Nullhypothesen
 1. Es besteht kein Unterschied in der Wahrnehmung geschlechtsspezifischer Beiträge zwischen Männern und Frauen.
-2. Frauen stehen zielgerichteten/geschlechtsspezifischen/klischeeabbildenden Beiträgen nicht positiver gegenüber als Männer.
-3. Männer fühlen sich nicht weniger geschlechtsspezifisch diskriminiert als Frauen.
+2. Frauen und Männer stehen zielgerichteten/geschlechtsspezifischen/klischeeabbildenden Beiträgen gleich gegenüber.
+3. Es besteht kein Unterschied im Gefühl der geschlechtsspezifischen Diskriminierung bei Männern und Frauen.
 
