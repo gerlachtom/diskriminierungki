@@ -57,3 +57,9 @@ Data Cleaning ist vollständig
 a.	Es besteht ein Unterschied in der Wahrnehmung       geschlechtsspezifischer Beiträge zwischen Männern und Frauen.
 2.	Frauen stehen zielgerichteten/geschlechtsspezifischen/klischeeabbildenden Beiträgen positiver gegenüber als Männer.
 3.	Männer fühlen sich weniger geschlechtsspezifisch diskriminiert als Frauen.
+
+# Nullhypothesen
+1. Es besteht kein Unterschied in der Wahrnehmung geschlechtsspezifischer Beiträge zwischen Männern und Frauen.
+2. Frauen stehen zielgerichteten/geschlechtsspezifischen/klischeeabbildenden Beiträgen nicht positiver gegenüber als Männer.
+3. Männer fühlen sich nicht weniger geschlechtsspezifisch diskriminiert als Frauen.
+
