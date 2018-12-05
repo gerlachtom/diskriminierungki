@@ -10,14 +10,14 @@ print("Hier werden später statistische Analysen durchgeführt. Thema ab dem 16.
 print("Hier werden später Grafiken erstellt. Thema ab dem 16.11.2018")
 
 #Bibliotheken laden ----
-install.packages("tidyverse")
-install.packages("lubridate")
-install.packages("psych")
-install.packages("esquisse")
-install.packages("ggthemes")
-install.packages("ggplot2")
+#install.packages("tidyverse")
+#install.packages("lubridate")
+#install.packages("psych")
+#install.packages("esquisse")
+#install.packages("ggthemes")
+#install.packages("ggplot2")
 
-install.packages("devtools")
+#install.packages("devtools")
 library(devtools)
 devtools::install_github("HCIC/r-tools")
 library(tidyverse)
@@ -29,8 +29,9 @@ raw <- load_surveymonkey_csv(filename)
 
 ##### FEEDBACK: Das ginge auch in einer Zeile: raw.short <- raw[-1:-9, usw., usw., ] Dann sind die Zahlen allerdings anders :-) ----
 raw.short1 <- raw [,c(-1:-9)] 
-raw.short2 <- raw.short1 [,c(-3:-14)]
-raw.short <- raw.short2 [,c(-4:-85)]
+raw.short2 <- raw.short1 [,c(-4)]  
+raw.short3 <- raw.short2 [,c(-5)]
+raw.short <- raw.short3 [,c(-14:-95)]
 
 
 #Codebook einmal generieren, danach ausklammern, sonst überschreibt es sich ----  
@@ -40,7 +41,7 @@ raw.short <- raw.short2 [,c(-4:-85)]
 
 codeb <- read_codebook("codebook_final.csv")
 names(raw.short) <- codeb$variable
-View(raw.short)                       
+                     
 
 raw.short$geschlecht <- as.factor(raw.short$geschlecht)
 
