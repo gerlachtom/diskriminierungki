@@ -125,7 +125,6 @@ data <- data %>%
   select (-starts_with("diskri", ignore.case = F))
 
 saveRDS(data, "data/Smart Identification2.rds")
-View(data)
 
 
 ##### FEEDBACK: Gefällt mir eigentlich ganz gut. Die vielen Kontrollausgaben mit View() sollten Sie noch entfernen, das kann schnell irritieren, wenn jemand den ganzen Code auf einmal ausführt. ----
