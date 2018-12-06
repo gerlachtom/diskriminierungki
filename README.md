@@ -12,10 +12,6 @@ Tom Gerlach
 
 # Faktorenraum
 ![tooltip](images/Faktorenraum.png)
-
-# Änderung
-7.11: Protokollordner erstellt
-
 # Thinking Hats: Optimierung der Messinstrumente
 HUT1: Die Reihenfolge der Fragen passt und baut logisch aufeinander auf.
 Änderung der Reihenfolge der Items bei der letzten Frage zum Thema Bewertung von Inhalten:
@@ -38,9 +34,33 @@ HUT4 (Effizienz)
 1. Frage: siehe HUT5, nicht effizient. Schwierig zu beantworten, daher unnötig.
 2. Frage: Werbebeiträge werden als geschlechterbezogen oder klischeehaft empfunden, zu ähnlich? Vielleicht eins rausnehmen, da die Antworten immer gleich bei beiden lauten werden
 
-<<<<<<< HEAD
+
+# Unterschiedshypothesen
+1.	Frauen nehmen geschlechterspezifische Beiträge häufiger wahr als Männer.
+2.	Frauen stehen zielgerichteten Beiträgen positiver gegenüber als Männer.
+3.	Männer fühlen sich weniger geschlechtsspezifisch diskriminiert als Frauen.
+
+# Nullhypothesen
+1. Frau nehmen geschlechterspezifische Beiträge seltener oder gleichhäufig wahr wie Männer.
+2. Frauen stehen zielgerichteten Beiträgen negativer oder genauso positiv gegenüber.
+3. Männer fühlen sich stärker oder gleich geschlechtspezifisch diskriminiert wie Frauen.
+
+
+# Hinweise zum Umgang mit P-Werten
+Wie alle anderen Sozialforscher interpretieren P-Werte und verwerfen die Nullhypothese bei p<0,05. In diesen Fällen wird die zugehörtige Unterschiedshypothese beibehalten.
+
+Die Problematik besteht darin, dass eine 5-prozentige Chance besteht, einen Alpha-Fehler zu begehen. Somit muss darauf geachtet werden, dass bei jeder zusätzlichen Analyse von Unterschieden, die Chance ein fehlberbehaftetes Ergebnis zu erhalten weiter ansteigt.
+
+Die späteren Ergebnisse sind später zu interpretieren. :-)
+
+Was zum Schmausen:
+http://www.perfendo.org/docs/BayesProbability/twelvePvaluemisconceptions.pdf
+http://blog.minitab.com/blog/adventures-in-statistics-2/not-all-p-values-are-created-equal
+https://novustat.com/statistik-glossar/p-wert-statistik.html
 
 =======
+# Änderung
+7.11: Protokollordner erstellt
 #Data Cleaning
 28.11.2018
 -Datensatz ist geladen
@@ -50,16 +70,3 @@ HUT4 (Effizienz)
 
 Data Cleaning ist vollständig
 >>>>>>> 44255797a0488251972bf88bda6dd6e5c27e7e9f
-
-
-# Unterschiedshypothesen
-1.	Frauen nehmen geschlechterspezifische Beiträge häufiger wahr als Männer.
-a.	Es besteht ein Unterschied in der Wahrnehmung       geschlechtsspezifischer Beiträge zwischen Männern und Frauen.
-2.	Frauen stehen zielgerichteten/geschlechtsspezifischen/klischeeabbildenden Beiträgen positiver gegenüber als Männer.
-3.	Männer fühlen sich weniger geschlechtsspezifisch diskriminiert als Frauen.
-
-# Nullhypothesen
-1. Es besteht kein Unterschied in der Wahrnehmung geschlechtsspezifischer Beiträge zwischen Männern und Frauen.
-2. Frauen und Männer stehen zielgerichteten/geschlechtsspezifischen/klischeeabbildenden Beiträgen gleich gegenüber.
-3. Es besteht kein Unterschied im Gefühl der geschlechtsspezifischen Diskriminierung bei Männern und Frauen.
-
