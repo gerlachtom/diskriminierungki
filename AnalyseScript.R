@@ -100,7 +100,7 @@ raw.short$diskri3 <- ordered(raw.short$diskri3, levels = skala.zustimmung)
 raw.short$diskri4 <- ordered(raw.short$diskri4, levels = skala.zustimmung)
 
 
-#### Skalen berechnen
+#### Skalen berechnen ----
 
 library(psych)
 
@@ -126,7 +126,7 @@ data <- data %>%
 
 saveRDS(data, "data/Smart Identification2.rds")
 
-###T-Tests
+###T-Tests ----
 
 #Hypothese 1
 t.test(filter(data, geschlecht=="männlich")$WAHRNEHMUNG,
