@@ -126,9 +126,17 @@ data <- data %>%
 
 saveRDS(data, "data/Smart Identification2.rds")
 
+###T-Tests
 
-##### FEEDBACK: Gefällt mir eigentlich ganz gut. Die vielen Kontrollausgaben mit View() sollten Sie noch entfernen, das kann schnell irritieren, wenn jemand den ganzen Code auf einmal ausführt. ----
-##### Schauen Sie aber bitte nochmal, welche Nutzerfaktoren aktuell noch im Fragebogen sind, sie haben insgesamt sehr großzügig Spalten entfernt. KUT und den Bildungsstand sollten Sie auf keinen Fall löschen.
+#Hypothese 1
+t.test(filter(data, geschlecht=="männlich")$WAHRNEHMUNG,
+       filter(data, geschlecht=="weiblich")$WAHRNEHMUNG)
+#Hypothese 2
+t.test(filter(data, geschlecht=="männlich")$TARGETING,
+       filter(data, geschlecht=="weiblich")$TARGETING)
 
+#Hypothese 3
+t.test(filter(data, geschlecht=="männlich")$DISKRI,
+       filter(data, geschlecht=="weiblich")$DISKRI)
 
           

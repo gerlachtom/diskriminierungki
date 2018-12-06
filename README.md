@@ -41,7 +41,7 @@ HUT4 (Effizienz)
 3.	Männer fühlen sich weniger geschlechtsspezifisch diskriminiert als Frauen.
 
 # Nullhypothesen
-1. Frau nehmen geschlechterspezifische Beiträge seltener oder gleichhäufig wahr wie Männer.
+1. Frauen nehmen geschlechterspezifische Beiträge seltener oder gleichhäufig wahr wie Männer.
 2. Frauen stehen zielgerichteten Beiträgen negativer oder genauso positiv gegenüber.
 3. Männer fühlen sich stärker oder gleich geschlechtspezifisch diskriminiert wie Frauen.
 
