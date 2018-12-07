@@ -23,6 +23,7 @@ devtools::install_github("HCIC/r-tools")
 library(tidyverse)
 source("surveymonkey.R")
 
+
 #Datensatz laden ----
 filename <- "data/Smart Identification.csv"
 raw <- load_surveymonkey_csv(filename) 
