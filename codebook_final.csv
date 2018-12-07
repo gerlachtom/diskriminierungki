@@ -1,6 +1,16 @@
 variable;text
 geschlecht;Bitte geben Sie Ihr Geschlecht an. Response
 alter;Bitte geben Sie Ihr Alter in Jahren an. Open-Ended Response
+bildung;Welchen höchsten Bildungsabschluss haben Sie (bisher) erlangt? Response_1
+job;Bitte geben Sie die Tätigkeit an, der Sie momentan nachgehen. Response_2
+kut1;Bitte geben Sie an, wie sehr sie folgenden Fragen zustimmen. Bitte geben Sie an, wie sehr sie folgenden Fragen zustimmen. Ich kann ziemlich viele der technischen Probleme, mit denenich konfrontiert werde, allein lösen.
+kut2;X17 Technische Geräte sind oft undurchschaubar und schwer zubeherrschen.
+kut3;X18 Es macht mir richtig Spaß, ein technisches Problem zuknacken
+kut4;X19 Weil ich mit bisherigen technischen Problemen gut zurechtgekommen bin, blicke ich auch künftigen technischenProblemen optimistisch entgegen.
+kut5;X20 Ich fühle mich technischen Geräten gegenüber so hilflos, dassich die Finger von ihnen lasse.
+kut6;X21 Auch wenn Widerstände auftreten, bearbeite ich eintechnisches Problem weiter.
+kut7;X22 Wenn ich ein technisches Problem löse, so geschieht esmeistens durch Glück.
+kut8;X23 Die meisten technischen Probleme sind so kompliziert, dass eswenig Sinn hat, sich mit ihnen auseinander zu setzen.
 nutzung;Wie oft nutzen Sie soziale Netzwerke (z.B. Facebook oder Instagram)? Response_4
 wahrnehmung1;Gesponserte Werbebeiträge in meinen sozialen Netzwerken... nehme ich bewusst wahr.
 wahrnehmung2;X108 entsprechen meinen Interessen.

@@ -1,0 +1,35 @@
+variable;text
+VAR1;Bitte geben Sie Ihr Geschlecht an. Response
+VAR2;Bitte geben Sie Ihr Alter in Jahren an. Open-Ended Response
+VAR3;Welchen höchsten Bildungsabschluss haben Sie (bisher) erlangt? Response_1
+VAR4;Bitte geben Sie die Tätigkeit an, der Sie momentan nachgehen. Response_2
+VAR5;Bitte geben Sie an, wie sehr sie folgenden Fragen zustimmen. Bitte geben Sie an, wie sehr sie folgenden Fragen zustimmen. Ich kann ziemlich viele der technischen Probleme, mit denenich konfrontiert werde, allein lösen.
+VAR6;X17 Technische Geräte sind oft undurchschaubar und schwer zubeherrschen.
+VAR7;X18 Es macht mir richtig Spaß, ein technisches Problem zuknacken
+VAR8;X19 Weil ich mit bisherigen technischen Problemen gut zurechtgekommen bin, blicke ich auch künftigen technischenProblemen optimistisch entgegen.
+VAR9;X20 Ich fühle mich technischen Geräten gegenüber so hilflos, dassich die Finger von ihnen lasse.
+VAR10;X21 Auch wenn Widerstände auftreten, bearbeite ich eintechnisches Problem weiter.
+VAR11;X22 Wenn ich ein technisches Problem löse, so geschieht esmeistens durch Glück.
+VAR12;X23 Die meisten technischen Probleme sind so kompliziert, dass eswenig Sinn hat, sich mit ihnen auseinander zu setzen.
+VAR13;Wie oft nutzen Sie soziale Netzwerke (z.B. Facebook oder Instagram)? Response_4
+VAR14;Gesponserte Werbebeiträge in meinen sozialen Netzwerken... nehme ich bewusst wahr.
+VAR15;X108 entsprechen meinen Interessen.
+VAR16;X109 unterscheiden sich von Werbebeiträgen, die meinen Freunden angezeigt werden.
+VAR17;X110 sind auf mich abgestimmt.
+VAR18;X111 sind mir noch nie aufgefallen.
+VAR19;Gesponserte Werbebeiträge in meinen sozialen Netzwerken..._1 stecken mich in eine bestimmte Schublade.
+VAR20;X113 sind auf mein Geschlecht bezogen.
+VAR21;X114 bilden Klischees ab.
+VAR22;Unter Targeting versteht man die zielgerichtete Adressierung und Anpassung von Inhalten an Individuen auf Grundlage ihrer Online-Aktivitäten, z.B. Gefällt-Mir-Angaben, Google-Suchen, Onlinekäufe.Targeting von Werbebeiträgen in sozialen Netzwerken... finde ich nützlich.
+VAR23;X116 empfinde ich als störend.
+VAR24;X117 finde ich beängstigend.
+VAR25;X118 erleichtern es mir, passende Produkte zu finden.
+VAR26;Bitte nehmen Sie Stellung zu folgenden Aussagen: Ich finde es gut, dass sich gesponserte Beiträge auf mein Geschlecht beziehen.
+VAR27;X120 Mich stört, dass mir bestimmte Werbebeiträge aufgrund meines Geschlechts vorenthalten werden.
+VAR28;X121 Ich bevorzuge geschlechtsneutrale Werbung.
+VAR29;X122 Geschlechtsspezifische Klischees empfinde ich als beleidigend.
+VAR30;Gesponserte Werbebeiträge... empfinde ich als geschlechterdiskriminierend.
+VAR31;X124 beurteile ich als geschlechtsneutral.
+VAR32;X125 diskriminieren mich aufgrund meines Geschlechts.
+VAR33;X126 enthalten ein hohes, geschlechtsspezifisches Diskriminierungspotential
+VAR34;Für Ihre Fragen, Anmerkungen oder Feedback: Open-Ended Response_5
