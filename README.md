@@ -40,6 +40,11 @@ HUT4 (Effizienz)
 2.	Frauen stehen zielgerichteten Beiträgen positiver gegenüber als Männer.
 3.	Männer fühlen sich weniger geschlechtsspezifisch diskriminiert als Frauen.
 
+# Anpassung der Unterschiedshypothesen
+1. Männer und Frauen unterscheiden sich in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
+2. Männer und Frauen unterscheiden sich in der Beurteilung von zielgerichteten Beiträgen.
+3. Männer und Frauen unterscheiden sich in der Empfindung von geschlechtsspezifischer Diskriminierung.
+
 # Nullhypothesen
 1. Frauen nehmen geschlechterspezifische Beiträge seltener oder gleichhäufig wahr wie Männer.
 2. Frauen stehen zielgerichteten Beiträgen negativer, oder genauso positiv gegenüber.
