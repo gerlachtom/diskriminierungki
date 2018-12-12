@@ -42,8 +42,8 @@ HUT4 (Effizienz)
 
 # Nullhypothesen
 1. Frauen nehmen geschlechterspezifische Beiträge seltener oder gleichhäufig wahr wie Männer.
-2. Frauen stehen zielgerichteten Beiträgen negativer oder genauso positiv gegenüber.
-3. Männer fühlen sich stärker oder gleich geschlechtspezifisch diskriminiert wie Frauen.
+2. Frauen stehen zielgerichteten Beiträgen negativer, oder genauso positiv gegenüber.
+3. Männer fühlen sich stärker, oder gleich geschlechtspezifisch diskriminiert wie Frauen.
 
 
 # Hinweise zum Umgang mit P-Werten
