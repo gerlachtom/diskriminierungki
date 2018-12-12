@@ -63,6 +63,8 @@ http://www.perfendo.org/docs/BayesProbability/twelvePvaluemisconceptions.pdf
 http://blog.minitab.com/blog/adventures-in-statistics-2/not-all-p-values-are-created-equal
 https://novustat.com/statistik-glossar/p-wert-statistik.html
 
+
+
 =======
 # Änderung
 7.11: Protokollordner erstellt
