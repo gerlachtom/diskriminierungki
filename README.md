@@ -58,18 +58,7 @@ http://www.perfendo.org/docs/BayesProbability/twelvePvaluemisconceptions.pdf
 http://blog.minitab.com/blog/adventures-in-statistics-2/not-all-p-values-are-created-equal
 https://novustat.com/statistik-glossar/p-wert-statistik.html
 
-#Überarbeitet: Text von Herrn Hildebrandt und Herrn Calero-Valdez zum Umgang mit P-Werten
 
-Hinweis zum Umgang mit p-Values
-Wie gängig in der Sozialwissenschaft werden hier die p-Werte interpretiert und die Nullhypothese bei p<0.05 verworfen. Da der Umgang mit der Überschreitungswahrscheinlichkeit (p = probability, engl. für Wahrscheinlichkeit) häufig zu Problemen mit der Interpretation führt, seien hier kurz die Gegebenheiten formuliert:
-p gibt immer eine Aussage über die Daten und darüber, wie gut die Daten zur Nullhypothese (H0) passen. Dabei kann p einen Wert zwischen 0 und 1 annehmen. Die Nullhypothese geht – im Zuge dieser Untersuchung – davon aus, dass kein Unterschied in den zu untersuchenden Gruppen auftritt. Mit dem p-Wert wird dabei keine Aussage über den Wahrheitsgehalt der Hypothese getroffen. Ist der p-Wert unter p<0.05, so kann mit 95-prozentiger Wahrscheinlichkeit davon ausgegangen werden, dass ein Unterschied aufgetreten ist. Das Testergebnis ist damit statistisch signifikant, bei p=0.01 sogar hoch signifikant und spricht damit noch extremer gegen die Nullhypothese. Damit wird H0 zugunsten der Alternativhypothese verworfen und die untersuchte Alternativhypothese, z.B. H1 angenommen. Das Signifikanzniveau von 5% gewährleistet eine geringe Gefahr, Fehler der 1. und der 2. Art zu begehen.
-Es ist wichtig hervorzuheben, dass er p-Wert nicht die Signifikanz ist und nur über diese berichtet. Außerdem bedeutet ein Wert größer als das festgelegte Signifikanzniveau (p>0.05), dass kein Effekt im Testverfahren zu finden ist, der Effekt kann unter Umständen zu einer geringen Wahrscheinlichkeit in sehr geringen Fällen trotzdem auftreten.
-Schließlich ist noch zu betonen, dass ein einzelner signifikanter Hypothesentest nicht unbedingt ausreichend ist, besonders wenn der Wert nah an p=0.05 liegt. Die Werte sollten daher im Kontext mit anderen p-Werten und den anderen Ergebnissen der Untersuchung beobachtet werden. Dabei ist es jedoch wichtig, sich nicht nur auf den p-Wert zu verlassen, da auch zwei unterschiedliche Tests denselben Wert erzeugen können aber unterschiedlichen Raten entsprechen.
-Weitere Informationen zu p-Werten können hier nachgelesen werden:
-MatheGuru.com (2018): Signifikanz, Signifikanzniveau. Abgerufen am 06.12.2018.
-The Minitab Blog (2014): Not All P Values are Created Equal Abgerufen am 04.12.2018.
-Goodman, Steven (2008): A Dirty Dozen: Twelve P-Value Misconceptions. Semin Hematol 45:135-140, Elsevier Inc.
-The Minitab Blog (2014): How to Correctly Interpret P Values. Abgerufen am 04.12.18.
 
 =======
 # Änderung
