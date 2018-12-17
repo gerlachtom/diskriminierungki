@@ -129,15 +129,29 @@ saveRDS(data, "data/Smart Identification2.rds")
 
 ###T-Tests ----
 
-#Hypothese 1
+#### Unterschiedshypothese 1: Geschlecht und Wahrnehmung  ----
+## Hypothese: Frauen nehmen geschlechterspezifische Beiträge häufiger wahr als Männer.
+## H0: Männer und Frauen unterscheiden sich in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
+## Unverbundener T-Test. UV: Geschlecht, AV: Wahrnehmung:
 t.test(filter(data, geschlecht=="männlich")$WAHRNEHMUNG,
        filter(data, geschlecht=="weiblich")$WAHRNEHMUNG)
-#Hypothese 2
+## Ergebnis: H0 verwerfen.
+
+#### Unterschiedshypothese 2: Geschlecht und Bewertung von Targeting  ----
+## Hypothese: Frauen stehen zielgerichteten Beiträgen positiver gegenüber als Männer.
+## H0: Männer und Frauen unterscheiden sich in der Beurteilung von zielgerichteten Beiträgen.
+## Unverbundener T-Test. UV: Geschlecht, AV: Targeting:
 t.test(filter(data, geschlecht=="männlich")$TARGETING,
        filter(data, geschlecht=="weiblich")$TARGETING)
+## Ergebnis: H0 verwerfen.
 
-#Hypothese 3
+#### Unterschiedshypothese 2: Geschlecht und Empfindung von Diskriminierung  ----
+## Hypothese: Männer und Frauen unterscheiden sich in der Empfindung von geschlechtsspezifischer Diskriminierung.
+## H0: Männer fühlen sich stärker, oder gleich geschlechtspezifisch diskriminiert wie Frauen.
+## Unverbundener T-Test. UV: Geschlecht, AV: Diskriminierung:
 t.test(filter(data, geschlecht=="männlich")$DISKRI,
        filter(data, geschlecht=="weiblich")$DISKRI)
+## Ergebnis: H0 verwerfen.
+
 
           
