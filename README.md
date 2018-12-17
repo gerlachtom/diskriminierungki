@@ -52,9 +52,9 @@ HUT4 (Effizienz)
 
 
 # Hinweise zum Umgang mit P-Werten
-Wie alle anderen Sozialforscher interpretieren P-Werte und verwerfen die Nullhypothese bei p<0,05. In diesen Fällen wird die zugehörtige Unterschiedshypothese beibehalten.
+Wie alle anderen Sozialforscher interpretieren wir die P-Werte und verwerfen die Nullhypothese bei einem Signifikanzniveau von p=0.05. Die zugehörige Alternativhypothese wird bei p<0.05 vorläufig angenommen.
 
-Die Problematik besteht darin, dass eine 5-prozentige Chance besteht, einen Alpha-Fehler zu begehen. Somit muss darauf geachtet werden, dass bei jeder zusätzlichen Analyse von Unterschieden, die Chance ein fehlberbehaftetes Ergebnis zu erhalten weiter ansteigt.
+Die Problematik besteht darin, dass anhand des p-Wertes nicht die Wahrscheinlichkeit eines Alpha-Fehlers gemessen werden kann. Es kann lediglich die Aussage getroffen werden, dass unsere Daten weniger als 5% wahrscheinlich sind, wenn die Nullhypothese richtig ist.
 
 Die späteren Ergebnisse sind später zu interpretieren. :-)
 
