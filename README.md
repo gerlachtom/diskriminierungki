@@ -52,7 +52,7 @@ HUT4 (Effizienz)
 
 
 # Hinweise zum Umgang mit P-Werten
-Wie alle anderen Sozialforscher interpretieren wir die P-Werte und verwerfen die Nullhypothese bei einem Signifikanzniveau von p=0.05. Die zugehörige Alternativhypothese wird bei p<0.05 vorläufig angenommen.
+Wie alle anderen Sozialforscher interpretieren wir die P-Werte und verwerfen die Nullhypothese bei einem Signifikanzniveau von p=0.05. Die zugehörige Alternativhypothese wird bei p<0.05 vorläufig angenommen. Der p-Wert kann als die Wahrscheinlichkeit des beobachteten Ergebnisses beschrieben werden, wenn die Nullhypothese stimmt. Er kann einen Wert zwischen 0 und 1 annehmen. Zu beachten ist, dass der p-Wert nicht mit der Signifikanz zu verwechseln ist, sondern lediglich eine Auskunft über diese gibt. 
 
 Die Problematik besteht darin, dass anhand des p-Wertes nicht die Wahrscheinlichkeit eines Alpha-Fehlers gemessen werden kann. Es kann lediglich die Aussage getroffen werden, dass unsere Daten weniger als 5% wahrscheinlich sind, wenn die Nullhypothese richtig ist.
 
