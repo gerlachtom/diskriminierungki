@@ -153,5 +153,17 @@ t.test(filter(data, geschlecht=="männlich")$DISKRI,
        filter(data, geschlecht=="weiblich")$DISKRI)
 ## Ergebnis: H0 verwerfen.
 
+#### Zusammenhangshypothese 1: Alter und Wahrnehmung
+## H1: Es besteht ein Zusammenhang zwischen dem Alter und der Wahrnehmung von gesponserten Werbebeiträgen.
+## H0: Es besteht kein Zusammenhang zwischen dem Alter und der Wahrnehmung von gesponserten Werbebeiträgen.
 
+#### Zusammenhangshypothese 2: Geschlecht und Diskriminierung
+## H1: Es besteht ein Zusammenhang zwischen dem Geschlecht und dem Empfinden der Diskriminierung bei gesponserten Werbebeiträgen.
+## H0: Es besteht kein Zusammenhang zwischen dem Geschlecht und dem Empfinden der Diskriminierung bei gesponsterten Werbebeiträgen.
+
+#### Zusammenhangshypothese 3:
+## H1: Es besteht ein Zusammenhang zwischen dem Alter und der Häufigkeit der Nutzung.
+## H0: Es besteht kein Zusammenhang zwischen dem Alter und der Häufigkeit der Nutzung.
+
+cor.test(data=df_multi, ~age+wahrnehmung)
           
