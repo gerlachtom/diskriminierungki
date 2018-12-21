@@ -47,6 +47,7 @@ names(raw.short) <- codeb$variable
 raw.short$geschlecht <- as.factor(raw.short$geschlecht)
 raw.short$bildung <- as.factor(raw.short$bildung)
 raw.short$job <- as.factor(raw.short$job)
+raw.short$alter <- as.factor(raw.short$alter)
 
 #Faktoren zuweisen ----
 
@@ -130,40 +131,45 @@ saveRDS(data, "data/Smart Identification2.rds")
 ###T-Tests ----
 
 #### Unterschiedshypothese 1: Geschlecht und Wahrnehmung  ----
-## Hypothese: Frauen nehmen geschlechterspezifische Beiträge häufiger wahr als Männer.
-## H0: Männer und Frauen unterscheiden sich in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
+## Hypothese: Männer und Frauen unterscheiden sich in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
+## H0: Männer und Frauen unterscheiden sich nicht in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
 ## Unverbundener T-Test. UV: Geschlecht, AV: Wahrnehmung:
 t.test(filter(data, geschlecht=="männlich")$WAHRNEHMUNG,
        filter(data, geschlecht=="weiblich")$WAHRNEHMUNG)
 ## Ergebnis: H0 verwerfen.
 
 #### Unterschiedshypothese 2: Geschlecht und Bewertung von Targeting  ----
-## Hypothese: Frauen stehen zielgerichteten Beiträgen positiver gegenüber als Männer.
-## H0: Männer und Frauen unterscheiden sich in der Beurteilung von zielgerichteten Beiträgen.
+## Hypothese: Männer und Frauen unterscheiden sich in der Beurteilung von zielgerichteten Beiträgen.
+## H0: Männer und Frauen unterscheiden sich nicht in der Beurteilung von zielgerichteten Beiträgen.
 ## Unverbundener T-Test. UV: Geschlecht, AV: Targeting:
 t.test(filter(data, geschlecht=="männlich")$TARGETING,
        filter(data, geschlecht=="weiblich")$TARGETING)
 ## Ergebnis: H0 verwerfen.
 
-#### Unterschiedshypothese 2: Geschlecht und Empfindung von Diskriminierung  ----
+#### Unterschiedshypothese 3: Geschlecht und Empfindung von Diskriminierung  ----
 ## Hypothese: Männer und Frauen unterscheiden sich in der Empfindung von geschlechtsspezifischer Diskriminierung.
-## H0: Männer fühlen sich stärker, oder gleich geschlechtspezifisch diskriminiert wie Frauen.
+## H0: Männer und Frauen unterscheiden sich nicht in der Empfindung von geschlechtsspezifischer Diskriminierung.
 ## Unverbundener T-Test. UV: Geschlecht, AV: Diskriminierung:
 t.test(filter(data, geschlecht=="männlich")$DISKRI,
        filter(data, geschlecht=="weiblich")$DISKRI)
 ## Ergebnis: H0 verwerfen.
 
-#### Zusammenhangshypothese 1: Alter und Wahrnehmung
-## H1: Es besteht ein Zusammenhang zwischen dem Alter und der Wahrnehmung von gesponserten Werbebeiträgen.
-## H0: Es besteht kein Zusammenhang zwischen dem Alter und der Wahrnehmung von gesponserten Werbebeiträgen.
+#### Zusammenhangshypothese 1: Nutzung und Wahrnehmung
+## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von gesponserten Werbebeiträgen.
+## H0: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von gesponserten Werbebeiträgen.
 
 #### Zusammenhangshypothese 2: Geschlecht und Diskriminierung
 ## H1: Es besteht ein Zusammenhang zwischen dem Geschlecht und dem Empfinden der Diskriminierung bei gesponserten Werbebeiträgen.
 ## H0: Es besteht kein Zusammenhang zwischen dem Geschlecht und dem Empfinden der Diskriminierung bei gesponsterten Werbebeiträgen.
 
-#### Zusammenhangshypothese 3:
-## H1: Es besteht ein Zusammenhang zwischen dem Alter und der Häufigkeit der Nutzung.
-## H0: Es besteht kein Zusammenhang zwischen dem Alter und der Häufigkeit der Nutzung.
+#### Zusammenhangshypothese 3: Nutzung und Einordnung
+## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponserten Beiträgen.
+## H0: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponserten Beiträgen.
 
-cor.test(data=df_multi, ~age+wahrnehmung)
-          
+
+cor.test(data = df_multi, ~ nutzung+wahrnehmung)
+
+cor.test(data = df_multi, ~ geschlecht+diskri)
+
+cor.test(data = df_multi, ~ nutzung+einordnung)
+    
