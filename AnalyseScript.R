@@ -140,4 +140,7 @@ t.test(filter(data, geschlecht=="männlich")$TARGETING,
 t.test(filter(data, geschlecht=="männlich")$DISKRI,
        filter(data, geschlecht=="weiblich")$DISKRI)
 
+## FEEDBACK: Hypothesen haben leider nicht die Form, die in der Hausaufgabe gefordert war, daher kann ich Ihnen leider kein Feedback geben.
+# Die Zusammenhangshypothesen fehlen. 
+# Der Code oben sieht richtig aus, aber haben Sie wirklich drei Hypothesen zu Geschlecht?
           
