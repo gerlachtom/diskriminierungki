@@ -154,6 +154,8 @@ t.test(filter(data, geschlecht=="männlich")$DISKRI,
        filter(data, geschlecht=="weiblich")$DISKRI)
 ## Ergebnis: H0 verwerfen.
 
+## FEEDBACK: Das funktioniert alles so, aber wollen Sie wirklich drei mal Geschlecht untersuchen?
+
 #### Zusammenhangshypothese 1: Nutzung und Wahrnehmung
 ## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von gesponserten Werbebeiträgen.
 ## H0: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von gesponserten Werbebeiträgen.
@@ -172,4 +174,8 @@ cor.test(data = df_multi, ~ nutzung+wahrnehmung)
 cor.test(data = df_multi, ~ geschlecht+diskri)
 
 cor.test(data = df_multi, ~ nutzung+einordnung)
+
+## FEEDBACK: Das sieht auf den ersten Blick gut aus, in H2 ist aber ein richtig fetter Fehler. Den finden Sie aber selbst :-)
+# Ich bin mir aber nicht sicher, ob cor.test() zwischen Groß- und Kleinschreibung unterscheidet.
+# Im Zweifel besser genau so schreiben wie in den Daten: Groß.
     
