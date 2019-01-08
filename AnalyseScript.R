@@ -130,12 +130,12 @@ saveRDS(data, "data/Smart Identification2.rds")
 
 ###T-Tests ----
 
-#### Unterschiedshypothese 1: Geschlecht und Wahrnehmung  ----
-## Hypothese: Männer und Frauen unterscheiden sich in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
-## H0: Männer und Frauen unterscheiden sich nicht in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
+#### Unterschiedshypothese 1: Alter und Wahrnehmung  ----
+## Hypothese: Ältere und jüngere Menschen unterscheiden sich in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
+## H0: Ältere und jüngere Menschen unterscheiden sich nicht in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
 ## Unverbundener T-Test. UV: Geschlecht, AV: Wahrnehmung:
-t.test(filter(data, geschlecht=="männlich")$WAHRNEHMUNG,
-       filter(data, geschlecht=="weiblich")$WAHRNEHMUNG)
+t.test(filter(data, alter<30)$WAHRNEHMUNG,
+       filter(data, alter>30)$WAHRNEHMUNG)
 ## Ergebnis: H0 verwerfen.
 
 #### Unterschiedshypothese 2: Geschlecht und Bewertung von Targeting  ----
@@ -154,28 +154,24 @@ t.test(filter(data, geschlecht=="männlich")$DISKRI,
        filter(data, geschlecht=="weiblich")$DISKRI)
 ## Ergebnis: H0 verwerfen.
 
-## FEEDBACK: Das funktioniert alles so, aber wollen Sie wirklich drei mal Geschlecht untersuchen?
 
 #### Zusammenhangshypothese 1: Nutzung und Wahrnehmung
-## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von gesponserten Werbebeiträgen.
-## H0: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von gesponserten Werbebeiträgen.
+## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
+## H0: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
 
-#### Zusammenhangshypothese 2: Geschlecht und Diskriminierung
-## H1: Es besteht ein Zusammenhang zwischen dem Geschlecht und dem Empfinden der Diskriminierung bei gesponserten Werbebeiträgen.
-## H0: Es besteht kein Zusammenhang zwischen dem Geschlecht und dem Empfinden der Diskriminierung bei gesponsterten Werbebeiträgen.
+#### Zusammenhangshypothese 2:  Targeting und Diskriminierung
+## H1: Es besteht ein Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und dem Empfinden der Diskriminierung bei gesponserten Werbebeiträgen.
+## H0: Es besteht kein Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und dem Empfinden der Diskriminierung bei gesponsterten Werbebeiträgen.
 
 #### Zusammenhangshypothese 3: Nutzung und Einordnung
 ## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponserten Beiträgen.
 ## H0: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponserten Beiträgen.
 
 
-cor.test(data = df_multi, ~ nutzung+wahrnehmung)
+cor.test(data = df_multi, ~ NUTZUNG+WAHRNEHMUNG)
 
-cor.test(data = df_multi, ~ geschlecht+diskri)
+cor.test(data = df_multi, ~ TARGETING+DISKRI)
 
-cor.test(data = df_multi, ~ nutzung+einordnung)
+cor.test(data = df_multi, ~ NUTZUNG+EINORDNUNG)
 
-## FEEDBACK: Das sieht auf den ersten Blick gut aus, in H2 ist aber ein richtig fetter Fehler. Den finden Sie aber selbst :-)
-# Ich bin mir aber nicht sicher, ob cor.test() zwischen Groß- und Kleinschreibung unterscheidet.
-# Im Zweifel besser genau so schreiben wie in den Daten: Groß.
     
