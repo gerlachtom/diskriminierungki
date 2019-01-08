@@ -25,7 +25,7 @@ source("surveymonkey.R")
 
 
 #Datensatz laden ----
-filename <- "data/Smart Identification.csv"
+filename <- "data/SmartIdentification.csv"
 raw <- load_surveymonkey_csv(filename) 
 
 ##### FEEDBACK: Das ginge auch in einer Zeile: raw.short <- raw[-1:-9, usw., usw., ] Dann sind die Zahlen allerdings anders :-) ----
@@ -47,7 +47,7 @@ names(raw.short) <- codeb$variable
 raw.short$geschlecht <- as.factor(raw.short$geschlecht)
 raw.short$bildung <- as.factor(raw.short$bildung)
 raw.short$job <- as.factor(raw.short$job)
-raw.short$alter <- as.factor(raw.short$alter)
+raw.short$alter <- as.numeric(raw.short$alter)
 
 #Faktoren zuweisen ----
 
@@ -126,7 +126,9 @@ data <- data %>%
   select (-starts_with("genderbezug", ignore.case = F)) %>%
   select (-starts_with("diskri", ignore.case = F))
 
-saveRDS(data, "data/Smart Identification2.rds")
+new_df <- transform(data, altersgruppe=cut(data$alter, breaks=c(-Inf, median(data$alter), Inf), labels=c("jung", "alt")))
+
+saveRDS(data, "data/SmartIdentification2.rds")
 
 ###T-Tests ----
 
@@ -134,24 +136,24 @@ saveRDS(data, "data/Smart Identification2.rds")
 ## Hypothese: Ältere und jüngere Menschen unterscheiden sich in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
 ## H0: Ältere und jüngere Menschen unterscheiden sich nicht in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
 ## Unverbundener T-Test. UV: Geschlecht, AV: Wahrnehmung:
-t.test(filter(data, alter<30)$WAHRNEHMUNG,
-       filter(data, alter>30)$WAHRNEHMUNG)
+t.test(filter(new_df, altersgruppe=="jung")$WAHRNEHMUNG,
+       filter(new_df, altersgruppe=="alt")$WAHRNEHMUNG)
 ## Ergebnis: H0 verwerfen.
 
 #### Unterschiedshypothese 2: Geschlecht und Bewertung von Targeting  ----
 ## Hypothese: Männer und Frauen unterscheiden sich in der Beurteilung von zielgerichteten Beiträgen.
 ## H0: Männer und Frauen unterscheiden sich nicht in der Beurteilung von zielgerichteten Beiträgen.
 ## Unverbundener T-Test. UV: Geschlecht, AV: Targeting:
-t.test(filter(data, geschlecht=="männlich")$TARGETING,
-       filter(data, geschlecht=="weiblich")$TARGETING)
+t.test(filter(data, geschlecht=="Männlich")$TARGETING,
+       filter(data, geschlecht=="Weiblich")$TARGETING)
 ## Ergebnis: H0 verwerfen.
 
 #### Unterschiedshypothese 3: Geschlecht und Empfindung von Diskriminierung  ----
 ## Hypothese: Männer und Frauen unterscheiden sich in der Empfindung von geschlechtsspezifischer Diskriminierung.
 ## H0: Männer und Frauen unterscheiden sich nicht in der Empfindung von geschlechtsspezifischer Diskriminierung.
 ## Unverbundener T-Test. UV: Geschlecht, AV: Diskriminierung:
-t.test(filter(data, geschlecht=="männlich")$DISKRI,
-       filter(data, geschlecht=="weiblich")$DISKRI)
+t.test(filter(data, geschlecht=="Männlich")$DISKRI,
+       filter(data, geschlecht=="Weiblich")$DISKRI)
 ## Ergebnis: H0 verwerfen.
 
 
