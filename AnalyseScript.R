@@ -187,5 +187,5 @@ cor.test(data = data, ~ TARGETING+DISKRI)
 cor.test(data = data, ~ NUTZUNG+EINORDNUNG)
 
 ##Ergebnis: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponsorten Beiträgen
-#           r((276) = -0.74439, p = .4573). Dieser Zusammenhang liegt mit 95% Sicherheit zwischen
+#           r((276) = -0.74439, p = .4573). Dieser Zusammenhang liegt mit 95% Sicherheit zwischen 
     
