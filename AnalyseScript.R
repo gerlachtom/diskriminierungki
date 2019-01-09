@@ -179,7 +179,7 @@ cor.test(data = data, ~ TARGETING+DISKRI)
 
 ##Ergebnis: Es besteht ein signifikanter Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und der Emmpfindung von 
 #           Diskriminierung bei gesponsorten Werbebeiträgen (r(276) = 4.3383, p = 2.016e-05). Dieser Zusammenhang liegt mit 95% Sicherheit
-#           zwischen 
+#           zwischen
 
 #### Zusammenhangshypothese 3: Nutzung und Einordnung
 ## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponserten Beiträgen.
