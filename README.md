@@ -61,6 +61,7 @@ https://novustat.com/statistik-glossar/p-wert-statistik.html
 =======
 # Änderung
 7.11: Protokollordner erstellt
+9.1 : Hypothesen wurden ausgewertet und die Ergebnisse als Berichte verfasst.
 #Data Cleaning
 28.11.2018
 -Datensatz ist geladen
