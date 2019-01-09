@@ -172,7 +172,7 @@ cor.test(data = data, ~ NUTZUNG+WAHRNEHMUNG)
 #            geschlechtsspezifischen Werbebeiträgen (r(276) = -3.6957, p = .0264***). Dieser Zusammenhang liegt mit 95% Sicherheit
 #            zwischen
 
-#### Zusammenhangshypothese 2:  Targeting und Diskriminierung
+#### Zusammenhangshypothese 2:  Targeting und Diskriminierung 
 ## H1: Es besteht ein Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und dem Empfinden der Diskriminierung bei gesponserten Werbebeiträgen.
 ## H0: Es besteht kein Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und dem Empfinden der Diskriminierung bei gesponsterten Werbebeiträgen.
 cor.test(data = data, ~ TARGETING+DISKRI)
