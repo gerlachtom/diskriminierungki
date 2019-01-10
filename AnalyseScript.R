@@ -139,7 +139,7 @@ saveRDS(data, "data/SmartIdentification2.rds")
 t.test(filter(new_df, altersgruppe=="jung")$WAHRNEHMUNG,
        filter(new_df, altersgruppe=="alt")$WAHRNEHMUNG)
 ## Ergebnis: H0 verwerfen. Es gibt keinen signifikanten Unterschied zwischen älteren und jüngeren Menschen in der Häufigkeit der 
-#            Wahrnehmung von geschlechtsspezifischen Beiträgen (t(271,66) = 1.9324, p = 0,05).
+#            Wahrnehmung von geschlechtsspezifischen Beiträgen (t(271.66) = 1.9324, p = 0.054).
 
 #### Unterschiedshypothese 2: Geschlecht und Bewertung von Targeting  ----
 ## Hypothese: Männer und Frauen unterscheiden sich in der Beurteilung von zielgerichteten Beiträgen.
@@ -148,7 +148,7 @@ t.test(filter(new_df, altersgruppe=="jung")$WAHRNEHMUNG,
 t.test(filter(data, geschlecht=="Männlich")$TARGETING,
        filter(data, geschlecht=="Weiblich")$TARGETING)
 ## Ergebnis: Es gibt einen statistisch signifikanten Unterschied zwischen der Beurteilung von zielgerichteten Beiträgen zwischen
-##           Männern und Frauen (t(221,49) = -2,2364, p = .02632). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme eher
+##           Männern und Frauen (t(221.49) = -2.2364, p = .02632*). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme eher
 #            nicht zu" und "stimme eher zu".
 
 
@@ -160,7 +160,7 @@ t.test(filter(data, geschlecht=="Männlich")$TARGETING,
 t.test(filter(data, geschlecht=="Männlich")$DISKRI,
        filter(data, geschlecht=="Weiblich")$DISKRI)
 ## Ergebnis: Es gibt einen statistisch signifikanten Unterschied zwischen der Empfindung von geschlechtsspezifischer Diskriminierung
-#            zwischen Männern und Frauen (t(241,24) = -5,8542, p = 1.558e-08). Dieser Unterschied liegt mit 95% Sicherheit zwischen
+#            zwischen Männern und Frauen (t(241.24) = -5.8542, p = 1.558e-08***). Dieser Unterschied liegt mit 95% Sicherheit zwischen
 #            "stimme nicht zu" und "stimme eher nicht zu"
 
 #### Zusammenhangshypothese 1: Nutzung und Wahrnehmung
@@ -169,7 +169,7 @@ t.test(filter(data, geschlecht=="Männlich")$DISKRI,
 cor.test(data = data, ~ NUTZUNG+WAHRNEHMUNG)
 
 ## Ergebnis: Es besteht ein signifikanter Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von
-#            geschlechtsspezifischen Werbebeiträgen (r(276) = -3.6957, p = .0264***). Dieser Zusammenhang liegt mit 95% Sicherheit
+#            geschlechtsspezifischen Werbebeiträgen (r(276) = -3.6957, p = .0264*). Dieser Zusammenhang liegt mit 95% Sicherheit
 #            zwischen
 
 #### Zusammenhangshypothese 2:  Targeting und Diskriminierung 
@@ -178,7 +178,7 @@ cor.test(data = data, ~ NUTZUNG+WAHRNEHMUNG)
 cor.test(data = data, ~ TARGETING+DISKRI)
 
 ##Ergebnis: Es besteht ein signifikanter Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und der Emmpfindung von 
-#           Diskriminierung bei gesponsorten Werbebeiträgen (r(276) = 4.3383, p = 2.016e-05). Dieser Zusammenhang liegt mit 95% Sicherheit
+#           Diskriminierung bei gesponsorten Werbebeiträgen (r(276) = 4.3383, p = 2.016e-05***). Dieser Zusammenhang liegt mit 95% Sicherheit
 #           zwischen
 
 #### Zusammenhangshypothese 3: Nutzung und Einordnung
@@ -186,6 +186,6 @@ cor.test(data = data, ~ TARGETING+DISKRI)
 ## H0: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponserten Beiträgen.
 cor.test(data = data, ~ NUTZUNG+EINORDNUNG)
 
-##Ergebnis: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponsorten Beiträgen
-#           r((276) = -0.74439, p = .4573). Dieser Zusammenhang liegt mit 95% Sicherheit zwischen 
+##Ergebnis: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponsorten Beiträgen
+#           r((276) = -0.74439, p = .4573).
     
