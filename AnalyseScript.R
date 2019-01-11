@@ -27,10 +27,9 @@ source("surveymonkey.R")
 
 
 #Datensatz laden ----
-filename <- "data/SmartIdentification.csv"
+filename <- "data/SmartIdentification_all.csv"
 raw <- load_surveymonkey_csv(filename) 
 
-##### FEEDBACK: Das ginge auch in einer Zeile: raw.short <- raw[-1:-9, usw., usw., ] Dann sind die Zahlen allerdings anders :-) ----
 raw.short1 <- raw [,c(-1:-9)] 
 raw.short2 <- raw.short1 [,c(-4)]  
 raw.short3 <- raw.short2 [,c(-5)]
@@ -50,6 +49,7 @@ raw.short$geschlecht <- as.factor(raw.short$geschlecht)
 raw.short$bildung <- as.factor(raw.short$bildung)
 raw.short$job <- as.factor(raw.short$job)
 raw.short$alter <- as.numeric(raw.short$alter)
+
 
 #Faktoren zuweisen ----
 
@@ -198,6 +198,11 @@ data %>%  select(geschlecht, alter, NUTZUNG, KUT, WAHRNEHMUNG, EINORDNUNG, TARGE
 data_iv %>%  psych:: describe()
 
 ####Korrelationsanalyse
-jmv:: corrMatrix(data_iv, vars = c("geschlecht", "alter", "NUTZUNG", "KUT", "WAHRNEHMUNG", "EINORDNUNG", "TARGETING", "GENDERBEZUG", "DISKRI"))
+jmv:: corrMatrix(data_iv, vars = c( "alter", "NUTZUNG", "KUT", "WAHRNEHMUNG", "EINORDNUNG", "TARGETING", "GENDERBEZUG", "DISKRI"))
+
+####Lineare Regression
+
+
+
 
     
