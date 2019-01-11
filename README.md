@@ -36,20 +36,30 @@ HUT4 (Effizienz)
 
 
 # Unterschiedshypothesen
-1.	Frauen nehmen geschlechterspezifische Beiträge häufiger wahr als Männer.
-2.	Frauen stehen zielgerichteten Beiträgen positiver gegenüber als Männer.
-3.	Männer fühlen sich weniger geschlechtsspezifisch diskriminiert als Frauen.
+1.	Ältere und jüngere Menschen unterscheiden sich in der Häufigkeit der Wahrnehmung von        geschlechtsspezifischen Beiträgen.
+2.	Männer und Frauen unterscheiden sich in der Beurteilung von zielgerichteten Beiträgen.
+3.	Männer und Frauen unterscheiden sich in der Empfindung von geschlechtsspezifischer Diskriminierung.
 
 # Nullhypothesen
-1. Frauen nehmen geschlechterspezifische Beiträge seltener oder gleichhäufig wahr wie Männer.
-2. Frauen stehen zielgerichteten Beiträgen negativer, oder genauso positiv gegenüber.
-3. Männer fühlen sich stärker, oder gleich geschlechtspezifisch diskriminiert wie Frauen.
+1. Ältere und jüngere Menschen unterscheiden sich nicht in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
+2. Männer und Frauen unterscheiden sich nicht in der Beurteilung von zielgerichteten Beiträgen.
+3. Männer und Frauen unterscheiden sich nicht in der Empfindung von geschlechtsspezifischer Diskriminierung.
+
+# Zusammenhangshypothesen
+1. Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
+2. Es besteht ein Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und dem Empfinden der Diskriminierung bei gesponserten Werbebeiträgen.
+3. Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponserten Beiträgen.
+
+# Nullhypothesen
+1. Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
+2. Es besteht kein Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und dem Empfinden der Diskriminierung bei gesponsterten Werbebeiträgen.
+3. Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponserten Beiträgen.
 
 
 # Hinweise zum Umgang mit P-Werten
 Wie alle anderen Sozialforscher interpretieren P-Werte und verwerfen die Nullhypothese bei p<0,05. In diesen Fällen wird die zugehörtige Unterschiedshypothese beibehalten.
 
-Die Problematik besteht darin, dass eine 5-prozentige Chance besteht, einen Alpha-Fehler zu begehen. Somit muss darauf geachtet werden, dass bei jeder zusätzlichen Analyse von Unterschieden, die Chance ein fehlberbehaftetes Ergebnis zu erhalten weiter ansteigt.
+Die Problematik besteht darin, dass eine 5-prozentige Chance besteht, einen Alpha-Fehler zu begehen. Somit muss darauf geachtet werden, dass bei jeder zusätzlichen Analyse von Unterschieden, die Chance ein fehlberbehaftetes Ergebnis zu erhalten, weiter ansteigt.
 
 Die späteren Ergebnisse sind später zu interpretieren. :-)
 

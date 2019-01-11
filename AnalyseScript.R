@@ -16,11 +16,13 @@ print("Hier werden später Grafiken erstellt. Thema ab dem 16.11.2018")
 #install.packages("esquisse")
 #install.packages("ggthemes")
 #install.packages("ggplot2")
+#install.packages("jmv")
 
 #install.packages("devtools")
 library(devtools)
 devtools::install_github("HCIC/r-tools")
 library(tidyverse)
+library(jmv)
 source("surveymonkey.R")
 
 
@@ -188,4 +190,14 @@ cor.test(data = data, ~ NUTZUNG+EINORDNUNG)
 
 ##Ergebnis: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponsorten Beiträgen
 #           r((276) = -0.74439, p = .4573).
+
+
+#### Deskriptive Statistik für die unabhängiggen Variablen----
+
+data %>%  select(geschlecht, alter, NUTZUNG, KUT, WAHRNEHMUNG, EINORDNUNG, TARGETING, GENDERBEZUG, DISKRI) -> data_iv
+data_iv %>%  psych:: describe()
+
+####Korrelationsanalyse
+jmv:: corrMatrix(data_iv, vars = c("geschlecht", "alter", "NUTZUNG", "KUT", "WAHRNEHMUNG", "EINORDNUNG", "TARGETING", "GENDERBEZUG", "DISKRI"))
+
     
