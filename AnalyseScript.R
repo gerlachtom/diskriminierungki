@@ -218,4 +218,5 @@ jmv::linReg(data_iv, dep="KUT", covs =c("TARGETING", "DISKRI"),
 
 
 
+
     
