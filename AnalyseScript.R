@@ -33,7 +33,7 @@ raw <- load_surveymonkey_csv(filename)
 raw.short1 <- raw [,c(-1:-9)] 
 raw.short2 <- raw.short1 [,c(-4)]  
 raw.short3 <- raw.short2 [,c(-5)]
-raw.short <- raw.short3 [,c(-14:-95)]
+raw.short <- raw.short3 [c(-274:-280),c(-14:-95)]
 
 
 #Codebook einmal generieren, danach ausklammern, sonst überschreibt es sich ----  
@@ -140,8 +140,8 @@ saveRDS(data, "data/SmartIdentification2.rds")
 ## Unverbundener T-Test. UV: Alter, AV: Wahrnehmung:
 t.test(filter(new_df, altersgruppe=="jung")$WAHRNEHMUNG,
        filter(new_df, altersgruppe=="alt")$WAHRNEHMUNG)
-## Ergebnis: H0 verwerfen. Es gibt keinen signifikanten Unterschied zwischen älteren und jüngeren Menschen in der Häufigkeit der 
-#            Wahrnehmung von geschlechtsspezifischen Beiträgen (t(271.66) = 1.9324, p = 0.054).
+## Ergebnis: H0 verwerfen. Es gibt einen signifikanten Unterschied zwischen älteren und jüngeren Menschen in der Häufigkeit der 
+#            Wahrnehmung von geschlechtsspezifischen Beiträgen (t(266.28) = 2.501, p = 0.012*).
 
 #### Unterschiedshypothese 2: Geschlecht und Bewertung von Targeting  ----
 ## Hypothese: Männer und Frauen unterscheiden sich in der Beurteilung von zielgerichteten Beiträgen.
@@ -150,7 +150,7 @@ t.test(filter(new_df, altersgruppe=="jung")$WAHRNEHMUNG,
 t.test(filter(data, geschlecht=="Männlich")$TARGETING,
        filter(data, geschlecht=="Weiblich")$TARGETING)
 ## Ergebnis: Es gibt einen statistisch signifikanten Unterschied zwischen der Beurteilung von zielgerichteten Beiträgen zwischen
-##           Männern und Frauen (t(221.49) = -2.2364, p = .02632*). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme eher
+##           Männern und Frauen (t(206.73) = -2.49, p = .013*). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme eher
 #            nicht zu" und "stimme eher zu".
 
 
@@ -162,7 +162,7 @@ t.test(filter(data, geschlecht=="Männlich")$TARGETING,
 t.test(filter(data, geschlecht=="Männlich")$DISKRI,
        filter(data, geschlecht=="Weiblich")$DISKRI)
 ## Ergebnis: Es gibt einen statistisch signifikanten Unterschied zwischen der Empfindung von geschlechtsspezifischer Diskriminierung
-#            zwischen Männern und Frauen (t(241.24) = -5.8542, p = 1.558e-08***). Dieser Unterschied liegt mit 95% Sicherheit zwischen
+#            zwischen Männern und Frauen (t(238.11) = -6.14, p = 3.408e-09***). Dieser Unterschied liegt mit 95% Sicherheit zwischen
 #            "stimme nicht zu" und "stimme eher nicht zu"
 
 #### Zusammenhangshypothese 1: Nutzung und Wahrnehmung
@@ -170,18 +170,16 @@ t.test(filter(data, geschlecht=="Männlich")$DISKRI,
 ## H0: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
 cor.test(data = data, ~ NUTZUNG+WAHRNEHMUNG)
 
-## Ergebnis: Es besteht ein signifikanter Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von
-#            geschlechtsspezifischen Werbebeiträgen (r(276) = -3.6957, p = .0264*). Dieser Zusammenhang liegt mit 95% Sicherheit
-#            zwischen
+## Ergebnis: Es besteht ein signifikanter Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen (r(271) = -.24, p = 6.477e-05***). 
+#Dieser Korrelationskoeffizient liegt mit 95% Sicherheit zwischen -0.35 und -0.12.Je häufiger soziale Netzwerke genutzt werden, desto seltener werden geschlechtsspezifische Werbebotschaften wahrgenommen.
 
 #### Zusammenhangshypothese 2:  Targeting und Diskriminierung 
 ## H1: Es besteht ein Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und dem Empfinden der Diskriminierung bei gesponserten Werbebeiträgen.
 ## H0: Es besteht kein Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und dem Empfinden der Diskriminierung bei gesponsterten Werbebeiträgen.
 cor.test(data = data, ~ TARGETING+DISKRI)
 
-##Ergebnis: Es besteht ein signifikanter Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und der Emmpfindung von 
-#           Diskriminierung bei gesponsorten Werbebeiträgen (r(276) = 4.3383, p = 2.016e-05***). Dieser Zusammenhang liegt mit 95% Sicherheit
-#           zwischen
+##Ergebnis: Es besteht ein signifikanter Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und der Empfindung von 
+#           Diskriminierung bei gesponsorten Werbebeiträgen (r(271) = .16, p = .007**). Der Korrelationskoeffizient liegt mit 95% Sicherheit zwischen 0.04 und 0.27.
 
 #### Zusammenhangshypothese 3: Nutzung und Einordnung
 ## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponserten Beiträgen.
@@ -189,10 +187,10 @@ cor.test(data = data, ~ TARGETING+DISKRI)
 cor.test(data = data, ~ NUTZUNG+EINORDNUNG)
 
 ##Ergebnis: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponsorten Beiträgen
-#           r((276) = -0.74439, p = .4573).
+#           r((271) = -.05, p = .42).
 
 
-#### Deskriptive Statistik für die unabhängiggen Variablen----
+#### Deskriptive Statistik für die unabhängigen Variablen----
 
 data %>%  select(geschlecht, alter, NUTZUNG, KUT, WAHRNEHMUNG, EINORDNUNG, TARGETING, GENDERBEZUG, DISKRI) -> data_iv
 data_iv %>%  psych:: describe()
@@ -200,8 +198,23 @@ data_iv %>%  psych:: describe()
 ####Korrelationsanalyse
 jmv:: corrMatrix(data_iv, vars = c( "alter", "NUTZUNG", "KUT", "WAHRNEHMUNG", "EINORDNUNG", "TARGETING", "GENDERBEZUG", "DISKRI"))
 
-####Lineare Regression
+####Lineare Regression für Wahrnehmung
 
+jmv::linReg(data_iv, dep="WAHRNEHMUNG", covs =c("EINORDNUNG", "TARGETING"), 
+            blocks=c("EINORDNUNG", "TARGETING"),
+            stdEst = TRUE, anova = TRUE, qqPlot = T, collin = T)
+
+####Lineare Regression für Genderbezug
+
+jmv::linReg(data_iv, dep="GENDERBEZUG", covs =c("alter", "DISKRI"), 
+            blocks=c("alter", "DISKRI"),
+            stdEst = TRUE, anova = TRUE, qqPlot = T, collin = T)
+
+####Lineare Regression für KUT
+
+jmv::linReg(data_iv, dep="KUT", covs =c("TARGETING", "DISKRI"), 
+            blocks=c("TARGETING", "DISKRI"),
+            stdEst = TRUE, anova = TRUE, qqPlot = T, collin = T)
 
 
 
