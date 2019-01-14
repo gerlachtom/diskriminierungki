@@ -45,12 +45,12 @@ http://blog.minitab.com/blog/adventures-in-statistics-2/not-all-p-values-are-cre
 https://novustat.com/statistik-glossar/p-wert-statistik.html
 
 ## Unterschiedshypothesen
-1.	Ältere und jüngere Menschen unterscheiden sich in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
+1.	Ältere und jüngere Menschen unterscheiden sich in der Häufigkeit der Wahrnehmung von zielgerichteten Werbebeiträgen.
 2.	Männer und Frauen unterscheiden sich in der Beurteilung von zielgerichteten Beiträgen.
 3.	Männer und Frauen unterscheiden sich in der Empfindung von geschlechtsspezifischer Diskriminierung.
 
 # Nullhypothesen
-1. Ältere und jüngere Menschen unterscheiden sich nicht in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
+1. Ältere und jüngere Menschen unterscheiden sich nicht in der Häufigkeit der Wahrnehmung von zielgerichteten Werbebeiträgen.
 2. Männer und Frauen unterscheiden sich nicht in der Beurteilung von zielgerichteten Beiträgen.
 3. Männer und Frauen unterscheiden sich nicht in der Empfindung von geschlechtsspezifischer Diskriminierung.
 

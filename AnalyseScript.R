@@ -135,8 +135,8 @@ saveRDS(data, "data/SmartIdentification2.rds")
 ###T-Tests ----
 
 #### Unterschiedshypothese 1: Alter und Wahrnehmung  ----
-## Hypothese: Ältere und jüngere Menschen unterscheiden sich in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
-## H0: Ältere und jüngere Menschen unterscheiden sich nicht in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
+## Hypothese: Ältere und jüngere Menschen unterscheiden sich in der Häufigkeit der Wahrnehmung von zielgerichteten Werbebeiträgen.
+## H0: Ältere und jüngere Menschen unterscheiden sich nicht in der Häufigkeit der Wahrnehmung von zielgerichteten Werbebeiträgen.
 ## Unverbundener T-Test. UV: Alter, AV: Wahrnehmung:
 t.test(filter(new_df, altersgruppe=="jung")$WAHRNEHMUNG,
        filter(new_df, altersgruppe=="alt")$WAHRNEHMUNG)
