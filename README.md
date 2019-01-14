@@ -1,4 +1,4 @@
-# Diskriminierung durch Künstliche Intelligenz
+### Diskriminierung durch Künstliche Intelligenz
 Kleingruppe zum Forschungsthema "Diskriminierung durch Künstliche Intelligenz"
 
 Forschungsfrage: "Welche Diskriminierungspotentiale sehen Nutzer bei der KI-gestützten Auswahl von Werbung in sozialen Netzwerken?"
@@ -10,15 +10,16 @@ Nathalie Meissner <br>
 Julia May <br>
 Tom Gerlach 
 
-# Faktorenraum
+## Faktorenraum
 ![tooltip](images/Faktorenraum.png)
-# Thinking Hats: Optimierung der Messinstrumente
+
+## Thinking Hats: Optimierung der Messinstrumente
 HUT1: Die Reihenfolge der Fragen passt und baut logisch aufeinander auf.
 Änderung der Reihenfolge der Items bei der letzten Frage zum Thema Bewertung von Inhalten:
 Umtausch der Items "Ich bevorzuge geschlechtsneutrale Werbung" und "Mich stört, dass mir bestimmte Werbebeiträge aufgrund meines Geschlechts vorenthalten werden", um evtl. Positionseffekte zu vermeiden
       
 HUT2 (Wording):
-Grob angepasst
+Allgmeine Finalisierung auf Wording-Ebene. Anpassung der Formulierung an diversen Stellen. Optimierung von Verständlichkeit, Richtigkeit und Trennschärfe.
 
 HUT3 (Inhaltsebene): 
 1. Frage: Antwortmöglichkeit "sind mir noch nie aufgefallen" ergänzt.  --> Frage 1 ist eines der wichtigsten Konstrukte und die Grundlage für alle weiteren Fragen. Deshalb sollte hier nochmal genauer gemessen werden mithilfe der zusätzlichen Antwortmöglichkeit
@@ -33,18 +34,17 @@ HUT5 (Konzeption Selbstauskunftsskala):
 Letzte Frage: Begriff "geschlechtsneutrale Werbung" --> was heißt geschlechtsneutral? --> Unwissen steht nicht für Validität und Repräsentativität, Begriff misst evtl. nicht das, was es messen soll
 
 
-# Hinweise zum Umgang mit P-Werten
+## Hinweise zum Umgang mit P-Werten
 Wie alle anderen Sozialforscher interpretieren wir die P-Werte und verwerfen die Nullhypothese bei einem Signifikanzniveau von p = 0.05. In diesen Fällen wird die zugehörige Alternativhypothese vorläufig angenommen. Der p-Wert gibt eine Aussage darüber, wie wahrscheinlich es ist, dass eine Alternativhypothese vorläufig angenommen werden kann. Dieser Wert liegt immer zwischen 0 und 1. Wenn der p-Wert also p<0.05 ist, dann kann mit 95% Wahrscheinlichkeit davon ausgegangen werden, das ein Unterschied aufgetreten ist. 
 Aufgrund der niedrigen Signifikanzschwelle von p=0.05 besteht auch nur eine geringe Gefahr, dass ein Fehler 1. Art (Alpha-Fehler) oder ein Fehler 2. Art (Beta-Fehler) auftritt. Der Fehler 1. Art wird über das Signifikanzniveau festgelegt und tritt dann auf, wenn H0 verworfen wird, obwohl diese in Wirklichkeit zutrifft. Der Fehler 2. Art wird über die Stichprobengröße festgelegt und gibt an, dass eine Test-Statistik nicht signifikant ist, obwohl sie wahrscheinlich signifikant geworden wäre, wenn eine größere Stichprobe zur Verfügung gestanden hätte. 
 
 Weiterführende Informationen können auf folgenden Websites nachgelesen werden.
 
-Was zum Schmausen:
 http://www.perfendo.org/docs/BayesProbability/twelvePvaluemisconceptions.pdf
 http://blog.minitab.com/blog/adventures-in-statistics-2/not-all-p-values-are-created-equal
 https://novustat.com/statistik-glossar/p-wert-statistik.html
 
-# Unterschiedshypothesen
+## Unterschiedshypothesen
 1.	Ältere und jüngere Menschen unterscheiden sich in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
 2.	Männer und Frauen unterscheiden sich in der Beurteilung von zielgerichteten Beiträgen.
 3.	Männer und Frauen unterscheiden sich in der Empfindung von geschlechtsspezifischer Diskriminierung.
@@ -57,9 +57,9 @@ https://novustat.com/statistik-glossar/p-wert-statistik.html
 # Ergebnisse der Unterschiedshypothesen
 1. H0 verwerfen. Es gibt einen signifikanten Unterschied zwischen älteren und jüngeren Menschen in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen (t(266.28) = 2.501, p = 0.012*).
 2.  Es gibt einen statistisch signifikanten Unterschied zwischen der Beurteilung von zielgerichteten Beiträgen zwischen Männern und Frauen (t(206.73) = -2.49, p = .013*). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme eher nicht zu" und "stimme eher zu".
-3. s gibt einen statistisch signifikanten Unterschied zwischen der Empfindung von geschlechtsspezifischer Diskriminierung zwischen Männern und Frauen (t(238.11) = -6.14, p = 3.408e-09***). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme nicht zu" und "stimme eher nicht zu".
+3. Es gibt einen statistisch signifikanten Unterschied zwischen der Empfindung von geschlechtsspezifischer Diskriminierung zwischen Männern und Frauen (t(238.11) = -6.14, p = 3.408e-09***). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme nicht zu" und "stimme eher nicht zu".
 
-#Zusammenhangshypothesen
+## Zusammenhangshypothesen
 1. Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
 2. Es besteht ein Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und dem Empfinden der Diskriminierung bei gesponserten Werbebeiträgen.
 3. Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponserten Beiträgen.
