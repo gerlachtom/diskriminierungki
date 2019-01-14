@@ -206,8 +206,8 @@ jmv::linReg(data_iv, dep="WAHRNEHMUNG", covs =c("EINORDNUNG", "TARGETING"),
 
 ####Lineare Regression für Genderbezug
 
-jmv::linReg(data_iv, dep="GENDERBEZUG", covs =c("alter", "DISKRI"), 
-            blocks=c("alter", "DISKRI"),
+jmv::linReg(data_iv, dep="GENDERBEZUG", covs =c("DISKRI"), 
+            blocks=c("DISKRI"),
             stdEst = TRUE, anova = TRUE, qqPlot = T, collin = T)
 
 ####Lineare Regression für KUT
@@ -215,6 +215,9 @@ jmv::linReg(data_iv, dep="GENDERBEZUG", covs =c("alter", "DISKRI"),
 jmv::linReg(data_iv, dep="KUT", covs =c("TARGETING", "DISKRI"), 
             blocks=c("TARGETING", "DISKRI"),
             stdEst = TRUE, anova = TRUE, qqPlot = T, collin = T)
+
+
+
 
 
 
