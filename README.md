@@ -34,11 +34,10 @@ Letzte Frage: Begriff "geschlechtsneutrale Werbung" --> was heißt geschlechtsne
 
 
 # Hinweise zum Umgang mit P-Werten
-Wie alle anderen Sozialforscher interpretieren P-Werte und verwerfen die Nullhypothese bei p<0,05. In diesen Fällen wird die zugehörtige Unterschiedshypothese beibehalten.
+Wie alle anderen Sozialforscher interpretieren wir die P-Werte und verwerfen die Nullhypothese bei einem Signifikanzniveau von p = 0.05. In diesen Fällen wird die zugehörige Alternativhypothese vorläufig angenommen. Der p-Wert gibt eine Aussage darüber, wie wahrscheinlich es ist, dass eine Alternativhypothese vorläufig angenommen werden kann. Dieser Wert liegt immer zwischen 0 und 1. Wenn der p-Wert also p<0.05 ist, dann kann mit 95% Wahrscheinlichkeit davon ausgegangen werden, das ein Unterschied aufgetreten ist. 
+Aufgrund der niedrigen Signifikanzschwelle von p=0.05 besteht auch nur eine geringe Gefahr, dass ein Fehler 1. Art (Alpha-Fehler) oder ein Fehler 2. Art (Beta-Fehler) auftritt. Der Fehler 1. Art wird über das Signifikanzniveau festgelegt und tritt dann auf, wenn H0 verworfen wird, obwohl diese in Wirklichkeit zutrifft. Der Fehler 2. Art wird über die Stichprobengröße festgelegt und gibt an, dass eine Test-Statistik nicht signifikant ist, obwohl sie wahrscheinlich signifikant geworden wäre, wenn eine größere Stichprobe zur Verfügung gestanden hätte. 
 
-Die Problematik besteht darin, dass eine 5-prozentige Chance besteht, einen Alpha-Fehler zu begehen. Somit muss darauf geachtet werden, dass bei jeder zusätzlichen Analyse von Unterschieden, die Chance ein fehlberbehaftetes Ergebnis zu erhalten, weiter ansteigt.
-
-Die späteren Ergebnisse sind später zu interpretieren. :-)
+Weiterführende Informationen können auf folgenden Websites nachgelesen werden.
 
 Was zum Schmausen:
 http://www.perfendo.org/docs/BayesProbability/twelvePvaluemisconceptions.pdf
