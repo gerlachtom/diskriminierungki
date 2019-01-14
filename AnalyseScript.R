@@ -202,19 +202,19 @@ jmv:: corrMatrix(data_iv, vars = c( "alter", "NUTZUNG", "KUT", "WAHRNEHMUNG", "E
 
 jmv::linReg(data_iv, dep="WAHRNEHMUNG", covs =c("EINORDNUNG", "TARGETING"), 
             blocks=c("EINORDNUNG", "TARGETING"),
-            stdEst = TRUE, anova = TRUE, qqPlot = T, collin = T)
+            stdEst = TRUE, anova = TRUE, qqPlot = T, r2Adj=T, collin = T)
 
 ####Lineare Regression für Genderbezug
 
 jmv::linReg(data_iv, dep="GENDERBEZUG", covs =c("DISKRI"), 
             blocks=c("DISKRI"),
-            stdEst = TRUE, anova = TRUE, qqPlot = T, collin = T)
+            stdEst = TRUE, anova = TRUE, qqPlot = T, r2Adj=T, collin = T)
 
 ####Lineare Regression für KUT
 
 jmv::linReg(data_iv, dep="KUT", covs =c("TARGETING", "DISKRI"), 
             blocks=c("TARGETING", "DISKRI"),
-            stdEst = TRUE, anova = TRUE, qqPlot = T, collin = T)
+            stdEst = TRUE, anova = TRUE, qqPlot = T,r2Adj=T, collin = T)
 
 
 
