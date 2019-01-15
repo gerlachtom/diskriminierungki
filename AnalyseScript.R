@@ -217,6 +217,24 @@ jmv::linReg(data_iv, dep="KUT", covs =c("TARGETING", "DISKRI"),
             stdEst = TRUE, anova = TRUE, qqPlot = T,r2Adj=T, collin = T)
 
 
+#Deskriptive Statistik: Beschreibung der Stichprobe
+library(ggplot2)
+
+ggplot(data = data) +
+  aes(x = alter) +
+  geom_histogram(bins = 30, fill = "#0c4c8a") +
+  labs(title = "Studentische T-Verteilung",
+    x = "Alter",
+    y = "Häufigkeit") +
+  theme_minimal()
+ +
+  theme_minimal()
+
+
+
+
+
+
 
 
 
