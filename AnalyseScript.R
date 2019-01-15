@@ -135,8 +135,8 @@ saveRDS(data, "data/SmartIdentification2.rds")
 ###T-Tests ----
 
 #### Unterschiedshypothese 1: Alter und Wahrnehmung  ----
-## Hypothese: Ältere und jüngere Menschen unterscheiden sich in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
-## H0: Ältere und jüngere Menschen unterscheiden sich nicht in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen.
+## Hypothese: Ältere und jüngere Menschen unterscheiden sich in der Häufigkeit der Wahrnehmung von zielgerichteten Werbebeiträgen.
+## H0: Ältere und jüngere Menschen unterscheiden sich nicht in der Häufigkeit der Wahrnehmung von zielgerichteten Werbebeiträgen.
 ## Unverbundener T-Test. UV: Alter, AV: Wahrnehmung:
 t.test(filter(new_df, altersgruppe=="jung")$WAHRNEHMUNG,
        filter(new_df, altersgruppe=="alt")$WAHRNEHMUNG)
@@ -218,19 +218,40 @@ jmv:: corrMatrix(data_iv, vars = c( "alter", "NUTZUNG", "KUT", "WAHRNEHMUNG", "E
 
 jmv::linReg(data_iv, dep="WAHRNEHMUNG", covs =c("EINORDNUNG", "TARGETING"), 
             blocks=c("EINORDNUNG", "TARGETING"),
-            stdEst = TRUE, anova = TRUE, qqPlot = T, collin = T)
+            stdEst = TRUE, anova = TRUE, qqPlot = T, r2Adj=T, collin = T)
 
 ####Lineare Regression für Genderbezug
 
-jmv::linReg(data_iv, dep="GENDERBEZUG", covs =c("alter", "DISKRI"), 
-            blocks=c("alter", "DISKRI"),
-            stdEst = TRUE, anova = TRUE, qqPlot = T, collin = T)
+jmv::linReg(data_iv, dep="GENDERBEZUG", covs =c("DISKRI"), 
+            blocks=c("DISKRI"),
+            stdEst = TRUE, anova = TRUE, qqPlot = T, r2Adj=T, collin = T)
 
 ####Lineare Regression für KUT
 
 jmv::linReg(data_iv, dep="KUT", covs =c("TARGETING", "DISKRI"), 
             blocks=c("TARGETING", "DISKRI"),
-            stdEst = TRUE, anova = TRUE, qqPlot = T, collin = T)
+            stdEst = TRUE, anova = TRUE, qqPlot = T,r2Adj=T, collin = T)
+
+
+#Deskriptive Statistik: Beschreibung der Stichprobe
+library(ggplot2)
+
+ggplot(data = data) +
+  aes(x = alter) +
+  geom_histogram(bins = 30, fill = "#0c4c8a") +
+  labs(title = "Studentische T-Verteilung",
+    x = "Alter",
+    y = "Häufigkeit") +
+  theme_minimal()
+ +
+  theme_minimal()
+
+
+
+
+
+
+
 
 
 
