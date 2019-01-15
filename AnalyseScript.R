@@ -141,7 +141,8 @@ saveRDS(data, "data/SmartIdentification2.rds")
 t.test(filter(new_df, altersgruppe=="jung")$WAHRNEHMUNG,
        filter(new_df, altersgruppe=="alt")$WAHRNEHMUNG)
 ## Ergebnis: H0 verwerfen. Es gibt einen signifikanten Unterschied zwischen älteren und jüngeren Menschen in der Häufigkeit der 
-#            Wahrnehmung von geschlechtsspezifischen Beiträgen (t(266.28) = 2.501, p = 0.012*).
+#            Wahrnehmung von geschlechtsspezifischen Beiträgen (t(266.28) = 2.501, p = 0.012).
+
 
 #### Unterschiedshypothese 2: Geschlecht und Bewertung von Targeting  ----
 ## Hypothese: Männer und Frauen unterscheiden sich in der Beurteilung von zielgerichteten Beiträgen.
@@ -152,8 +153,23 @@ t.test(filter(data, geschlecht=="Männlich")$TARGETING,
 ## Ergebnis: Es gibt einen statistisch signifikanten Unterschied zwischen der Beurteilung von zielgerichteten Beiträgen zwischen
 ##           Männern und Frauen (t(206.73) = -2.49, p = .013*). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme eher
 #            nicht zu" und "stimme eher zu".
+#Grafik erstellen
 
-
+library(ggplot2)
+  
+data %>% 
+  filter(geschlecht != "keine Angabe") %>% 
+  group_by(geschlecht) %>% 
+  summarise(mean_TARGETING, sem_TARGETING = stderr(TARGETING))
+  ggplot() +
+  aes(x = geschlecht, y = TARGETING) +
+    geom_boxplot(fill = '#0c4c8a') +
+    labs(title = 'Frauen nehmen Targeting in Sozialen Netzwerken häufiger wahr als Männer',
+         x = 'Geschlecht',
+         y = 'Targeting',
+         caption = 'n=273, Punkte sind Ausreißer',
+         subtitle = 'Boxplot von Targeting') +
+    theme_gray()
 
 #### Unterschiedshypothese 3: Geschlecht und Empfindung von Diskriminierung  ----
 ## Hypothese: Männer und Frauen unterscheiden sich in der Empfindung von geschlechtsspezifischer Diskriminierung.

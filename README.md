@@ -71,8 +71,8 @@ https://novustat.com/statistik-glossar/p-wert-statistik.html
 3. Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponserten Beiträgen.
 
 #Ergebnisse der Zusammenhangshypothesen
-1. Es besteht ein signifikanter Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen (r(271) = -.24, p = 6.477e-05***). Dieser Korrelationskoeffizient liegt mit 95% Sicherheit zwischen -0.35 und -0.12.Je häufiger soziale Netzwerke genutzt werden, desto seltener werden geschlechtsspezifische Werbebotschaften wahrgenommen.
-2. Es besteht ein signifikanter Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und der Empfindung von Diskriminierung bei gesponsorten Werbebeiträgen (r(271) = .16, p = .007**). Der Korrelationskoeffizient liegt mit 95% Sicherheit zwischen 0.04 und 0.27.
+1. Es besteht ein signifikanter Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen (r(271) = -.24, p = 6.477e-05). Dieser Korrelationskoeffizient liegt mit 95% Sicherheit zwischen -0.35 und -0.12.Je häufiger soziale Netzwerke genutzt werden, desto seltener werden geschlechtsspezifische Werbebotschaften wahrgenommen.
+2. Es besteht ein signifikanter Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und der Empfindung von Diskriminierung bei gesponsorten Werbebeiträgen (r(271) = .16, p = .007). Der Korrelationskoeffizient liegt mit 95% Sicherheit zwischen 0.04 und 0.27.
 3. Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponsorten Beiträgen (r(271)= -.05, p = .42).
 
 =======
