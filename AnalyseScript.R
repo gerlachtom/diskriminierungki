@@ -110,7 +110,7 @@ raw.short$diskri4 <- ordered(raw.short$diskri4, levels = skala.zustimmung)
 
 library(psych)
 
-schluesselliste <- list(NUTZUNG = c("nutzung"),
+schluesselliste <- list(NUTZUNG = c("-nutzung"),
                         KUT = c("kut1", "kut2", "kut3", "kut4", "kut5", "kut6", "kut7", "kut8"),
                         WAHRNEHMUNG = c("wahrnehmung1", "wahrnehmung2", "wahrnehmung3", "wahrnehmung4", "wahrnehmung5"),
                         EINORDNUNG = c("einordnung1", "einordnung2", "einordnung3"),
@@ -159,19 +159,19 @@ t.test(filter(data, geschlecht=="Männlich")$TARGETING,
 
 library(ggplot2)
 
-data %>% 
-  filter(geschlecht != "keine Angabe") %>% 
-  group_by(geschlecht) %>% 
-  summarise(mean_TARGETING, sem_TARGETING = stderr(TARGETING))
-ggplot() +
-  aes(x = geschlecht, y = TARGETING) +
-  geom_boxplot(fill = '#0c4c8a') +
-  labs(title = 'Frauen nehmen Targeting in Sozialen Netzwerken häufiger wahr als Männer',
-       x = 'Geschlecht',
-       y = 'Targeting',
-       caption = 'n=273, Punkte sind Ausreißer',
-       subtitle = 'Boxplot von Targeting') +
-  theme_gray()
+#data %>% 
+#  filter(geschlecht != "keine Angabe") %>% 
+ # group_by(geschlecht) %>% 
+  #summarise(mean_TARGETING, sem_TARGETING = stderr(TARGETING))
+#ggplot() +
+ # aes(x = geschlecht, y = TARGETING) +
+  #geom_boxplot(fill = '#0c4c8a') +
+  #labs(title = 'Frauen nehmen Targeting in Sozialen Netzwerken häufiger wahr als Männer',
+   #    x = 'Geschlecht',
+    #   y = 'Targeting',
+     #  caption = 'n=273, Punkte sind Ausreißer',
+      # subtitle = 'Boxplot von Targeting') +
+#  theme_gray()
 
 
 #### Unterschiedshypothese 3: Geschlecht und Empfindung von Diskriminierung  ----
@@ -221,6 +221,12 @@ jmv:: corrMatrix(data_iv, vars = c( "alter", "NUTZUNG", "KUT", "WAHRNEHMUNG", "E
 
 jmv::linReg(data_iv, dep="WAHRNEHMUNG", covs =c("EINORDNUNG", "TARGETING"), 
             blocks=c("EINORDNUNG", "TARGETING"),
+            stdEst = TRUE, anova = TRUE, qqPlot = T, r2Adj=T, collin = T)
+
+####Lineare Regression für Nutzung
+
+jmv::linReg(data_iv, dep="NUTZUNG", covs =c("WAHRNEHMUNG"), 
+            blocks=c("WAHRNEHMUNG"),
             stdEst = TRUE, anova = TRUE, qqPlot = T, r2Adj=T, collin = T)
 
 ####Lineare Regression für Genderbezug
@@ -276,6 +282,7 @@ raw.short$targeting2 <- factor(raw.short$targeting2, labels = skala.zustimmung)
 raw.short$targeting3 <- factor(raw.short$targeting3, labels = skala.zustimmung)
 raw.short$targeting4 <- factor(raw.short$targeting4, labels = skala.zustimmung)
 
+raw.short$nutzung <- factor(raw.short$nutzung, labels = skala.nutzerfaktoren)
 
 pl <- raw.short %>% 
   select(wahrnehmung1, wahrnehmung2, wahrnehmung3, wahrnehmung4, wahrnehmung5) %>% 
@@ -292,7 +299,7 @@ pl1 <- raw.short %>%
   as.data.frame() %>% 
   likert() %>% 
   plot() +
-  labs(title = "Likert Diagramm Diskriminierungsempfinden durch gesponserten Werbebeiträgen", y= "Prozent",
+  labs(title = "Likert Diagramm Diskriminierungsempfinden durch gesponserte Werbebeiträge", y= "Prozent",
        x= "Diskriminierungsempfinden",
        fill = "Antwort")
 
@@ -308,8 +315,15 @@ pl2 <- raw.short %>%
        fill = "Antwort")
 pl2
 
-
-
+pl3 <- raw.short %>%
+  select(nutzung) %>% 
+  as.data.frame() %>% 
+  likert() %>% 
+  plot()+
+  labs(title = "Likert Diagramm Nutzung", y= "Prozent",
+       x="Nutzung",
+       fill ="Antwort")
+pl3
 
 
 
