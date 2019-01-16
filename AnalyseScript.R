@@ -111,12 +111,12 @@ raw.short$diskri4 <- ordered(raw.short$diskri4, levels = skala.zustimmung)
 library(psych)
 
 schluesselliste <- list(NUTZUNG = c("nutzung"),
-                        KUT = c("kut1", "kut2", "kut3", "kut4", "kut5", "kut6", "kut7", "kut8"),
-                        WAHRNEHMUNG = c("wahrnehmung1", "wahrnehmung2", "wahrnehmung3", "wahrnehmung4", "wahrnehmung5"),
+                        KUT = c("kut1", -"kut2", "kut3", "kut4", -"kut5", "kut6", -"kut7", -"kut8"),
+                        WAHRNEHMUNG = c("wahrnehmung1", "wahrnehmung2", "wahrnehmung3", "wahrnehmung4", -"wahrnehmung5"),
                         EINORDNUNG = c("einordnung1", "einordnung2", "einordnung3"),
-                        TARGETING = c("targeting1", "targeting2", "targeting3", "targeting4"),
-                        GENDERBEZUG = c("genderbezug1", "genderbezug2", "genderbezug3", "genderbezug4"),
-                        DISKRI = c("diskri1", "diskri2", "diskri3", "diskri4")
+                        TARGETING = c("targeting1", -"targeting2", -"targeting3", "targeting4"),
+                        GENDERBEZUG = c("genderbezug1", -"genderbezug2", "genderbezug3", -"genderbezug4"),
+                        DISKRI = c(-"diskri1", "diskri2", -"diskri3", -"diskri4")
                         )
 scores <- scoreItems(schluesselliste, raw.short, missing = TRUE, min = 1, max = 6)
 
@@ -155,14 +155,13 @@ t.test(filter(data, geschlecht=="Männlich")$TARGETING,
 ##           Männern und Frauen (t(206.73) = -2.49, p = .013*). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme eher
 #            nicht zu" und "stimme eher zu".
 
-#Grafik erstellen
+#Grafik erstellen zu Unterschiedshyptohese 2----
 
 library(ggplot2)
 
 data %>% 
   filter(geschlecht != "keine Angabe") %>% 
   group_by(geschlecht) %>% 
-  summarise(mean_TARGETING, sem_TARGETING = stderr(TARGETING))
 ggplot() +
   aes(x = geschlecht, y = TARGETING) +
   geom_boxplot(fill = '#0c4c8a') +
@@ -170,7 +169,7 @@ ggplot() +
        x = 'Geschlecht',
        y = 'Targeting',
        caption = 'n=273, Punkte sind Ausreißer',
-       subtitle = 'Boxplot von Targeting') +
+       subtitle = 'Boxplot von Geschlecht und Targeting') +
   theme_gray()
 
 
@@ -183,6 +182,24 @@ t.test(filter(data, geschlecht=="Männlich")$DISKRI,
 ## Ergebnis: Es gibt einen statistisch signifikanten Unterschied zwischen der Empfindung von geschlechtsspezifischer Diskriminierung
 #            zwischen Männern und Frauen (t(238.11) = -6.14, p = 3.408e-09***). Dieser Unterschied liegt mit 95% Sicherheit zwischen
 #            "stimme nicht zu" und "stimme eher nicht zu"
+
+#Graphik erstellen zu Unterschiedshypothese 3----
+library(ggplot2)
+
+
+data %>% 
+  filter(geschlecht != "keine Angabe") %>% 
+  group_by(geschlecht) %>% 
+ggplot(data = data) +
+  aes(x = geschlecht, y = DISKRI) +
+  geom_boxplot(fill = '#0c4c8a') +
+  labs(title = 'Frauen nehmen geschlechtsspezifische Diskriminierung häufiger wahr',
+    x = 'Geschlecht',
+    y = 'Diskriminierungsempfinden',
+    caption = 'n=273, Punkte sind Ausreißer',
+    subtitle = 'Boxplot von Geschlecht Geschlechterdiskriminierung') +
+  theme_gray()
+
 
 #### Zusammenhangshypothese 1: Nutzung und Wahrnehmung
 ## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
