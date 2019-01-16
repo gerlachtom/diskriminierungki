@@ -17,6 +17,7 @@ print("Hier werden später Grafiken erstellt. Thema ab dem 16.11.2018")
 #install.packages("ggthemes")
 #install.packages("ggplot2")
 #install.packages("jmv")
+#install.packages("likert")
 
 #install.packages("devtools")
 library(devtools)
@@ -24,6 +25,7 @@ devtools::install_github("HCIC/r-tools")
 library(tidyverse)
 library(jmv)
 source("surveymonkey.R")
+library(likert)
 
 
 #Datensatz laden ----
@@ -141,8 +143,7 @@ saveRDS(data, "data/SmartIdentification2.rds")
 t.test(filter(new_df, altersgruppe=="jung")$WAHRNEHMUNG,
        filter(new_df, altersgruppe=="alt")$WAHRNEHMUNG)
 ## Ergebnis: H0 verwerfen. Es gibt einen signifikanten Unterschied zwischen älteren und jüngeren Menschen in der Häufigkeit der 
-#            Wahrnehmung von geschlechtsspezifischen Beiträgen (t(266.28) = 2.501, p = 0.012).
-
+#            Wahrnehmung von geschlechtsspezifischen Beiträgen (t(266.28) = 2.501, p = 0.012*).
 
 #### Unterschiedshypothese 2: Geschlecht und Bewertung von Targeting  ----
 ## Hypothese: Männer und Frauen unterscheiden sich in der Beurteilung von zielgerichteten Beiträgen.
@@ -153,23 +154,8 @@ t.test(filter(data, geschlecht=="Männlich")$TARGETING,
 ## Ergebnis: Es gibt einen statistisch signifikanten Unterschied zwischen der Beurteilung von zielgerichteten Beiträgen zwischen
 ##           Männern und Frauen (t(206.73) = -2.49, p = .013*). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme eher
 #            nicht zu" und "stimme eher zu".
-#Grafik erstellen
 
-library(ggplot2)
-  
-data %>% 
-  filter(geschlecht != "keine Angabe") %>% 
-  group_by(geschlecht) %>% 
-  summarise(mean_TARGETING, sem_TARGETING = stderr(TARGETING))
-  ggplot() +
-  aes(x = geschlecht, y = TARGETING) +
-    geom_boxplot(fill = '#0c4c8a') +
-    labs(title = 'Frauen nehmen Targeting in Sozialen Netzwerken häufiger wahr als Männer',
-         x = 'Geschlecht',
-         y = 'Targeting',
-         caption = 'n=273, Punkte sind Ausreißer',
-         subtitle = 'Boxplot von Targeting') +
-    theme_gray()
+
 
 #### Unterschiedshypothese 3: Geschlecht und Empfindung von Diskriminierung  ----
 ## Hypothese: Männer und Frauen unterscheiden sich in der Empfindung von geschlechtsspezifischer Diskriminierung.
@@ -233,7 +219,7 @@ jmv::linReg(data_iv, dep="KUT", covs =c("TARGETING", "DISKRI"),
             stdEst = TRUE, anova = TRUE, qqPlot = T,r2Adj=T, collin = T)
 
 
-#Deskriptive Statistik: Beschreibung der Stichprobe
+#Deskriptive Statistik: Beschreibung der Stichprobe----
 library(ggplot2)
 
 ggplot(data = data) +
@@ -248,8 +234,55 @@ ggplot(data = data) +
 
 
 
+#Likert Diagramme zu den einzelnen Konstrukten----
+
+raw.short$wahrnehmung1 <- factor(raw.short$wahrnehmung1, labels = skala.zustimmung)
+raw.short$wahrnehmung2 <- factor(raw.short$wahrnehmung2, labels = skala.zustimmung)
+raw.short$wahrnehmung3 <- factor(raw.short$wahrnehmung3, labels = skala.zustimmung)
+raw.short$wahrnehmung4 <- factor(raw.short$wahrnehmung4, labels = skala.zustimmung)
+raw.short$wahrnehmung5 <- factor(raw.short$wahrnehmung5, labels = skala.zustimmung)
+
+raw.short$diskri1 <-factor(raw.short$diskri1, labels = skala.zustimmung)
+raw.short$diskri2 <-factor(raw.short$diskri2, labels = skala.zustimmung)
+raw.short$diskri3 <-factor(raw.short$diskri3, labels = skala.zustimmung)
+raw.short$diskri4 <-factor(raw.short$diskri4, labels = skala.zustimmung)
+
+raw.short$targeting1 <- factor(raw.short$targeting1, labels = skala.zustimmung)
+raw.short$targeting2 <- factor(raw.short$targeting2, labels = skala.zustimmung)
+raw.short$targeting3 <- factor(raw.short$targeting3, labels = skala.zustimmung)
+raw.short$targeting4 <- factor(raw.short$targeting4, labels = skala.zustimmung)
 
 
+pl <- raw.short %>% 
+  select(wahrnehmung1, wahrnehmung2, wahrnehmung3, wahrnehmung4, wahrnehmung5) %>% 
+  as.data.frame() %>% 
+  likert() %>% 
+  plot() +
+  labs(title = "Likert Diagramm Wahrnehmung von gesponserten Werbebeiträgen", y= "Prozent",
+       x= "Wahrnehmung",
+       fill = "Antwort")
+pl
+
+pl1 <- raw.short %>% 
+  select(diskri1, diskri2, diskri3, diskri4) %>% 
+  as.data.frame() %>% 
+  likert() %>% 
+  plot() +
+  labs(title = "Likert Diagramm Diskriminierungsempfinden durch gesponserten Werbebeiträgen", y= "Prozent",
+       x= "Diskriminierungsempfinden",
+       fill = "Antwort")
+
+pl1
+
+pl2 <- raw.short %>% 
+  select(targeting1, targeting2, targeting3, targeting4) %>% 
+  as.data.frame() %>% 
+  likert() %>% 
+  plot() +
+  labs(title = "Likert Diagramm Beurteilung von Targeting", y= "Prozent",
+       x= "Diskriminierungsempfinden",
+       fill = "Antwort")
+pl2
 
 
 
