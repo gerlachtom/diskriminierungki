@@ -235,6 +235,12 @@ jmv::linReg(data_iv, dep="KUT", covs =c("TARGETING", "DISKRI"),
             blocks=c("TARGETING", "DISKRI"),
             stdEst = TRUE, anova = TRUE, qqPlot = T,r2Adj=T, collin = T)
 
+#### Lineare Regression für Targeting
+
+jmv::linReg(data_iv, dep="TARGETING", covs =c("DISKRI"), 
+            blocks=c("DISKRI"),
+            stdEst = TRUE, anova = TRUE, qqPlot = T,r2Adj=T, collin = T)
+
 
 #Deskriptive Statistik: Beschreibung der Stichprobe----
 library(ggplot2)
@@ -242,7 +248,8 @@ library(ggplot2)
 ggplot(data = data) +
   aes(x = alter) +
   geom_histogram(bins = 30, fill = "#0c4c8a") +
-  labs(title = "Studentische T-Verteilung",
+  labs(title = "Das Alter aller Probanden der Stichprobe",
+       caption = "n = 273",
     x = "Alter",
     y = "Häufigkeit") +
   theme_minimal()
