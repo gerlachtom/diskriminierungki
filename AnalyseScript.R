@@ -269,7 +269,7 @@ ggplot(data = data) +
 
 ####Lineare Regression für Nutzung
 
-jmv::linReg(data_iv, dep="NUTZUNG",, covs =c("WAHRNEHMUNG"), 
+jmv::linReg(data_iv, dep="NUTZUNG", covs =c("WAHRNEHMUNG"), 
             blocks=c("WAHRNEHMUNG"),
             stdEst = TRUE, anova = TRUE, qqPlot = T, r2Adj=T, collin = T)
 
@@ -299,7 +299,8 @@ ggplot(data = data) +
   aes(x = alter) +
   geom_histogram(bins = 30, fill = "#0c4c8a") +
   labs(title = "Das Alter aller Probanden der Stichprobe",
-       caption = "n = 273",
+       caption = "n = 273 
+       bins = 30",
     x = "Alter",
     y = "Häufigkeit") +
   theme_minimal()
