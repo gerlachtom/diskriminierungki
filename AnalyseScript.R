@@ -35,6 +35,7 @@ raw <- load_surveymonkey_csv(filename)
 raw.short1 <- raw [,c(-1:-9)] 
 raw.short2 <- raw.short1 [,c(-4)]  
 raw.short3 <- raw.short2 [,c(-5)]
+
 raw.short <- raw.short3 [c(-274:-280),c(-14:-95)]
 
 
@@ -255,9 +256,19 @@ jmv::linReg(data_iv, dep="WAHRNEHMUNG", covs =c("EINORDNUNG", "TARGETING"),
             blocks=c("EINORDNUNG", "TARGETING"),
             stdEst = TRUE, anova = TRUE, qqPlot = T, r2Adj=T, collin = T)
 
+library(ggplot2)
+
+ggplot(data = data) +
+  aes(x = NUTZUNG, y = WAHRNEHMUNG) +
+  geom_point(color = "#0c4c8a") +
+  theme_minimal()
+ggplot(data = data) +
+  aes(x = NUTZUNG, y = WAHRNEHMUNG) +
+  geom_point(color = "#0c4c8a") +
+  theme_minimal()
 ####Lineare Regression für Nutzung
 
-jmv::linReg(data_iv, dep="NUTZUNG", covs =c("WAHRNEHMUNG"), 
+jmv::linReg(data_iv, dep="NUTZUNG",, covs =c("WAHRNEHMUNG"), 
             blocks=c("WAHRNEHMUNG"),
             stdEst = TRUE, anova = TRUE, qqPlot = T, r2Adj=T, collin = T)
 
