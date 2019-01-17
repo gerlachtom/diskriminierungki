@@ -204,9 +204,9 @@ library(ggplot2)
 
 
 data %>% 
-  filter(geschlecht != "keine Angabe") %>% 
+  filter(geschlecht != "Keine Angabe") %>% 
   group_by(geschlecht) %>% 
-ggplot(data = data) +
+ggplot() +
   aes(x = geschlecht, y = DISKRI) +
   geom_boxplot(fill = '#0c4c8a') +
   labs(title = 'Frauen nehmen geschlechtsspezifische Diskriminierung häufiger wahr',
@@ -222,8 +222,8 @@ ggplot(data = data) +
 ## H0: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
 cor.test(data = data, ~ NUTZUNG+WAHRNEHMUNG)
 
-## Ergebnis: Es besteht ein signifikanter Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen (r(271) = -.24, p = 6.477e-05***). 
-#Dieser Korrelationskoeffizient liegt mit 95% Sicherheit zwischen -0.35 und -0.12.Je häufiger soziale Netzwerke genutzt werden, desto seltener werden geschlechtsspezifische Werbebotschaften wahrgenommen.
+## Ergebnis: Es besteht ein signifikanter Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen (r(271) = .41, p = 1.34e-12***). 
+#Dieser Korrelationskoeffizient liegt mit 95% Sicherheit zwischen 0.31 und 0.51 Punkten.Je häufiger soziale Netzwerke genutzt werden, desto häufiger werden geschlechtsspezifische Werbebotschaften wahrgenommen.
 
 #### Zusammenhangshypothese 2:  Targeting und Diskriminierung 
 ## H1: Es besteht ein Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und dem Empfinden der Diskriminierung bei gesponserten Werbebeiträgen.
@@ -231,7 +231,7 @@ cor.test(data = data, ~ NUTZUNG+WAHRNEHMUNG)
 cor.test(data = data, ~ TARGETING+DISKRI)
 
 ##Ergebnis: Es besteht ein signifikanter Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und der Empfindung von 
-#           Diskriminierung bei gesponsorten Werbebeiträgen (r(271) = .16, p = .007**). Der Korrelationskoeffizient liegt mit 95% Sicherheit zwischen 0.04 und 0.27.
+#           Diskriminierung bei gesponsorten Werbebeiträgen (r(271) = -.39, p = 1.77e-11***). Der Korrelationskoeffizient liegt mit 95% Sicherheit zwischen -0.49 und -0.28.
 
 #### Zusammenhangshypothese 3: Nutzung und Einordnung
 ## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponserten Beiträgen.
@@ -239,7 +239,7 @@ cor.test(data = data, ~ TARGETING+DISKRI)
 cor.test(data = data, ~ NUTZUNG+EINORDNUNG)
 
 ##Ergebnis: Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponsorten Beiträgen
-#           r((271) = -.05, p = .42).
+#           r((271) = .05, p = .42).
 
 
 #### Deskriptive Statistik für die unabhängigen Variablen----
@@ -266,16 +266,17 @@ ggplot(data = data) +
   aes(x = NUTZUNG, y = WAHRNEHMUNG) +
   geom_point(color = "#0c4c8a") +
   theme_minimal()
+
 ####Lineare Regression für Nutzung
 
 jmv::linReg(data_iv, dep="NUTZUNG",, covs =c("WAHRNEHMUNG"), 
             blocks=c("WAHRNEHMUNG"),
             stdEst = TRUE, anova = TRUE, qqPlot = T, r2Adj=T, collin = T)
 
-####Lineare Regression für Genderbezug
+####Lineare Regression für Diskriminierungsempfinden
 
-jmv::linReg(data_iv, dep="GENDERBEZUG", covs =c("DISKRI"), 
-            blocks=c("DISKRI"),
+jmv::linReg(data_iv, dep="DISKRI", covs =c("GENDERBEZUG"), 
+            blocks=c("GENDERBEZUG"),
             stdEst = TRUE, anova = TRUE, qqPlot = T, r2Adj=T, collin = T)
 
 ####Lineare Regression für KUT
