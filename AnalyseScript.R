@@ -202,20 +202,25 @@ t.test(filter(data, geschlecht=="Männlich")$DISKRI,
 #Graphik erstellen zu Unterschiedshypothese 3----
 library(ggplot2)
 
+#Farben verfügbar machen
+rwthcolor <- hcictools::rwth.colorpalette()
 
 data %>% 
   filter(geschlecht != "Keine Angabe") %>% 
   group_by(geschlecht) %>% 
 ggplot() +
-  aes(x = geschlecht, y = DISKRI) +
-  geom_boxplot(fill = '#0c4c8a') +
-  labs(title = 'Frauen nehmen geschlechtsspezifische Diskriminierung häufiger wahr',
+  aes(x = geschlecht, y = DISKRI, fill = geschlecht) +
+  scale_fill_manual(values = c(rwthcolor$blue, rwthcolor$red)) +
+  geom_boxplot() +
+  labs(title = 'Frauen nehmen geschlechtsspezifische Diskriminierung häufiger wahr als Männer',
+       fill = "Geschlecht",
     x = 'Geschlecht',
-    y = 'Diskriminierungsempfinden',
-    caption = 'n=273, Punkte sind Ausreißer',
-    subtitle = 'Boxplot von Geschlecht Geschlechterdiskriminierung') +
+    y = 'Diskriminierungsempfinden [1-6]',
+    caption = 'n=272, Punkte sind Ausreißer',
+    subtitle = 'Boxplot zum Diskriminierungsempfinden abhängig vom Geschlecht') +
   theme_gray()
 
+ggsave("Boxplot Unterschiedshypothese 3.pdf", width = 8, height = 6)
 
 #### Zusammenhangshypothese 1: Nutzung und Wahrnehmung
 ## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
