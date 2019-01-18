@@ -157,7 +157,7 @@ t.test(filter(data, geschlecht=="Männlich")$TARGETING,
 ##           Männern und Frauen (t(206.73) = -2.49, p = .013*). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme eher
 #            nicht zu" und "stimme eher zu".
 
-#Grafik erstellen zu Unterschiedshyptohese 2----
+#Grafik e Unterschiedshyptohese 2----
 
 library(ggplot2)
 
@@ -199,7 +199,7 @@ t.test(filter(data, geschlecht=="Männlich")$DISKRI,
 #            zwischen Männern und Frauen (t(238.11) = -6.14, p = 3.408e-09***). Dieser Unterschied liegt mit 95% Sicherheit zwischen
 #            "stimme nicht zu" und "stimme eher nicht zu"
 
-#Graphik erstellen zu Unterschiedshypothese 3----
+#Graphik Unterschiedshypothese 3----
 library(ggplot2)
 
 #Farben verfügbar machen
@@ -220,7 +220,7 @@ ggplot() +
     subtitle = 'Boxplot zum Diskriminierungsempfinden abhängig vom Geschlecht') +
   theme_gray()
 
-ggsave("Boxplot Unterschiedshypothese 3.pdf", width = 8, height = 6)
+#ggsave("Boxplot Unterschiedshypothese 3.pdf", width = 8, height = 6)
 
 #### Zusammenhangshypothese 1: Nutzung und Wahrnehmung
 ## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
@@ -299,7 +299,7 @@ jmv::linReg(data_iv, dep="TARGETING", covs =c("DISKRI"),
 
 #Deskriptive Statistik: Beschreibung der Stichprobe----
 library(ggplot2)
-
+library(scales)
 ggplot(data = data) +
   aes(x = alter) +
   geom_histogram(bins = 30, fill = "#0c4c8a") +
@@ -312,6 +312,24 @@ ggplot(data = data) +
   theme_minimal()
  +
   theme_minimal()
+
+library(ggplot2)
+rwthcolor <- hcictools::rwth.colorpalette()
+
+#Bildungsabschluss-Graphik
+library(ggplot2)
+
+ggplot(data = data) +
+  aes(x = bildung) +
+  geom_bar(fill = '#1b9e77') +
+  scale_y_continuous(limits = c(0,1), label = scales::percent_format(accuracy  = 1)) +
+  labs(title = 'Die meisten Probanden einenen Studienabschluss',
+    x = 'Bildung',
+    y = 'Häufigkeit', 
+    caption = 'n=272',
+    subtitle = 'Säulendiagramm nach höchstem Bildungsabschluss') + 
+  theme_gray()
+
 
 
 
