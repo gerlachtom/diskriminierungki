@@ -272,8 +272,8 @@ jmv::linReg(data_iv, dep="NUTZUNG", covs =c("WAHRNEHMUNG"),
 
 ####Lineare Regression für Diskriminierungsempfinden
 
-jmv::linReg(data_iv, dep="DISKRI", covs =c("GENDERBEZUG"), 
-            blocks=c("GENDERBEZUG"),
+jmv::linReg(data_iv, dep="DISKRI", covs =c("TARGETING", "GENDERBEZUG"), 
+            blocks=c("TARGETING", "GENDERBEZUG"),
             stdEst = TRUE, anova = TRUE, qqPlot = T, r2Adj=T, collin = T)
 
 ####Lineare Regression für KUT
@@ -299,7 +299,8 @@ ggplot(data = data) +
        caption = "n = 273 
        bins = 30",
     x = "Alter",
-    y = "Häufigkeit") +
+    y = "Häufigkeit",
+    fill = "job") +
   theme_minimal()
  +
   theme_minimal()

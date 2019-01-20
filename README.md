@@ -74,15 +74,34 @@ https://novustat.com/statistik-glossar/p-wert-statistik.html
 2. Es besteht ein signifikanter Zusammenhang zwischen der Beurteilung zielgerichteter Beiträge und der Empfindung von Diskriminierung bei gesponsorten Werbebeiträgen (r(271) = .16, p = .007). Der Korrelationskoeffizient liegt mit 95% Sicherheit zwischen 0.04 und 0.27.
 3. Es besteht kein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Einordnung von gesponsorten Beiträgen (r(271)= -.05, p = .42).
 
-=======
-# Änderung
-7.11: Protokollordner erstellt. 
-9.1 : Hypothesen wurden ausgewertet und die Ergebnisse als Berichte verfasst. 
-#Data Cleaning
-28.11.2018
--Datensatz ist geladen
--Codebook generiert
--Variablen umbenannt
--Zustimmungsskala erstellt
 
-Data Cleaning ist vollständig
+#Korrelationsanalyse der unabhängigen Variablen                                                                                                             
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+                                 Alter    NUTZUNG    KUT       WAHRNEHMUNG    EINORDNUNG    TARGETING    GENDERBEZUG    DISKRI   
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+   Alter          Pearson's r        —     -0.560    -0.155         -0.403        -0.100       -0.176         -0.113    -0.026   
+                  p-value            —     < .001     0.010         < .001         0.100        0.004          0.062     0.668   
+                                                                                                                                 
+   NUTZUNG        Pearson's r                   —     0.069          0.412         0.049        0.178          0.195    -0.101   
+                  p-value                       —     0.256         < .001         0.416        0.003          0.001     0.095   
+                                                                                                                                 
+   KUT            Pearson's r                             —          0.160        -0.044        0.150          0.178    -0.187   
+                  p-value                                 —          0.008         0.469        0.013          0.003     0.002   
+                                                                                                                                 
+   WAHRNEHMUNG    Pearson's r                                            —         0.131        0.218          0.178    -0.080   
+                  p-value                                                —         0.031       < .001          0.003     0.187   
+                                                                                                                                 
+   EINORDNUNG     Pearson's r                                                          —       -0.273         -0.189     0.353   
+                  p-value                                                              —       < .001          0.002    < .001   
+                                                                                                                                 
+   TARGETING      Pearson's r                                                                       —          0.428    -0.392   
+                  p-value                                                                           —         < .001    < .001   
+                                                                                                                                 
+   GENDERBEZUG    Pearson's r                                                                                      —    -0.573   
+                  p-value                                                                                          —    < .001   
+                                                                                                                                 
+   DISKRI         Pearson's r                                                                                                —   
+                  p-value                                                                                                    —   
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+
+
