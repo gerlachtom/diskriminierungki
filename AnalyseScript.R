@@ -220,7 +220,7 @@ ggplot() +
     subtitle = 'Boxplot zum Diskriminierungsempfinden abhängig vom Geschlecht') +
   theme_gray()
 
-#ggsave("Boxplot Unterschiedshypothese 3.pdf", width = 8, height = 6)
+ggsave("Boxplot Unterschiedshypothese 3.jpeg", width = 8, height = 6)
 
 #### Zusammenhangshypothese 1: Nutzung und Wahrnehmung
 ## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
@@ -263,14 +263,6 @@ jmv::linReg(data_iv, dep="WAHRNEHMUNG", covs =c("EINORDNUNG", "TARGETING"),
 
 library(ggplot2)
 
-ggplot(data = data) +
-  aes(x = NUTZUNG, y = WAHRNEHMUNG) +
-  geom_point(color = "#0c4c8a") +
-  theme_minimal()
-ggplot(data = data) +
-  aes(x = NUTZUNG, y = WAHRNEHMUNG) +
-  geom_point(color = "#0c4c8a") +
-  theme_minimal()
 
 ####Lineare Regression für Nutzung
 
@@ -317,21 +309,48 @@ rwthcolor <- hcictools::rwth.colorpalette()
 
 #Bildungsabschluss-Graphik
 library(ggplot2)
+library(forcats)
+library(dbplyr)
 
-ggplot(data = data) +
-  aes(x = bildung) +
-  geom_bar(fill = '#1b9e77') +
-  scale_y_continuous(limits = c(0,1), label = scales::percent_format(accuracy  = 1)) +
-  labs(title = 'Die meisten Probanden einenen Studienabschluss',
-    x = 'Bildung',
-    y = 'Häufigkeit', 
-    caption = 'n=272',
-    subtitle = 'Säulendiagramm nach höchstem Bildungsabschluss') + 
-  theme_gray()
+data %>% 
+  filter(bildung != "Keine Angabe") %>% 
+  group_by(bildung) %>% 
+  summarise(count = n()/dim(data)[1]) %>% 
+  ggplot() +
+  aes(x=bildung, y=count) + geom_col() + 
+  scale_y_continuous(limits=c(0,1),
+                     label = scales::percent_format(accuracy = 1)) +
+labs(title = 'Die meisten Probanden haben einen Studienabschluss',
+     x = 'Bildung', legend = c("Berufsausbildung","Fachabitur/Abitur","Hauptschulabschluss","Realschulabschluss",
+                               "Sonstiges", "Studienabschluss"),
+     y = 'Häufigkeit',
+     caption = 'n=272',
+     subtitle = 'Säulendiagramm nach höchstem Bildungsabschluss') + 
+  theme_gray() 
 
+ggsave("Balkendiagramm Bildung.jpeg", width = 8, height = 6)
 
+library(ggplot2)
+rwthcolor <- hcictools::rwth.colorpalette()
 
+data %>% 
+  filter(geschlecht != "Keine Angabe") %>% 
+  group_by(geschlecht) %>% 
+ggplot() +
+  aes(x = geschlecht, y = KUT, fill = geschlecht) +
+  scale_fill_manual(values = c(rwthcolor$blue, rwthcolor$red)) +
+  geom_boxplot() +
+  labs(title = 'Männer haben eine höhere Technikkompetenz als Frauen', 
+       fill = "Geschlecht",
+    x = 'Geschlecht',
+    y = 'Technikkompetenz [1-6]',
+    caption = 'n=273, Punkte sind Ausreißer',
+    subtitle = 'Boxplot von KUT nach Geschlecht') +
+  theme_minimal()
+ggsave("Boxplot KUT.jpeg", width = 8, height = 6)
 
+tapply(data$DISKRI,data$geschlecht,summary)
+tapply(data$KUT, data$geschlecht, summary)
 #Likert Diagramme zu den einzelnen Konstrukten----
 
 raw.short$wahrnehmung1 <- factor(raw.short$wahrnehmung1, labels = skala.zustimmung)
