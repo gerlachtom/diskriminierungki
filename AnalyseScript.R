@@ -9,7 +9,7 @@ print("Hier werden später statistische Analysen durchgeführt. Thema ab dem 16.
 # Graphik erstellung ---- 
 print("Hier werden später Grafiken erstellt. Thema ab dem 16.11.2018")
 
-#Bibliotheken laden ----
+#Bibliotheken laden -----
 #install.packages("tidyverse")
 #install.packages("lubridate")
 #install.packages("psych")
