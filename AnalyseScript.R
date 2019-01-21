@@ -322,8 +322,7 @@ data %>%
   scale_y_continuous(limits=c(0,1),
                      label = scales::percent_format(accuracy = 1)) +
 labs(title = 'Die meisten Probanden haben einen Studienabschluss',
-     x = 'Bildung', legend = c("Berufsausbildung","Fachabitur/Abitur","Hauptschulabschluss","Realschulabschluss",
-                               "Sonstiges", "Studienabschluss"),
+     x = 'Höchster Bildungsabschluss',
      y = 'Häufigkeit',
      caption = 'n=272',
      subtitle = 'Säulendiagramm nach höchstem Bildungsabschluss') + 
