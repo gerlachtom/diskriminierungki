@@ -55,9 +55,10 @@ https://novustat.com/statistik-glossar/p-wert-statistik.html
 3. Männer und Frauen unterscheiden sich nicht in der Empfindung von geschlechtsspezifischer Diskriminierung.
 
 # Ergebnisse der Unterschiedshypothesen
-1. H0 verwerfen. Es gibt einen signifikanten Unterschied zwischen älteren und jüngeren Menschen in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen (t(266.28) = 2.501, p = 0.012*).
-2.  Es gibt einen statistisch signifikanten Unterschied zwischen der Beurteilung von zielgerichteten Beiträgen zwischen Männern und Frauen (t(206.73) = -2.49, p = .013*). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme eher nicht zu" und "stimme eher zu".
-3. Es gibt einen statistisch signifikanten Unterschied zwischen der Empfindung von geschlechtsspezifischer Diskriminierung zwischen Männern und Frauen (t(238.11) = -6.14, p = 3.408e-09***). Dieser Unterschied liegt mit 95% Sicherheit zwischen "stimme nicht zu" und "stimme eher nicht zu".
+1. H0 verwerfen. Es gibt einen signifikanten Unterschied zwischen älteren und jüngeren Menschen in der Häufigkeit der Wahrnehmung von geschlechtsspezifischen Beiträgen (t(257.05) = 4.6684, p = 4.894e-06).
+Dieser Unterschied liegt mit 95% Sicherheit zwischen 0.28 und 0.69 Punkten einer 6-stufigen Likert-Skala.
+2.  Es gibt einen statistisch signifikanten Unterschied zwischen der Beurteilung von zielgerichteten Beiträgen zwischen Männern und Frauen (t(227.41) = 3.2311, p = .001416). Dieser Unterschied liegt mit 95% Sicherheit zwischen 0.16 und 0.66 Punkten einer 6-stufigen Likert-Skala.
+3. Es gibt einen statistisch signifikanten Unterschied zwischen der Empfindung von geschlechtsspezifischer Diskriminierung zwischen Männern und Frauen (t(257.67) = -5.0771, p = 7.353e-07).Dieser Unterschied liegt mit 95% Sicherheit zwischen -0.82 und -0.36 Punkten einer 6-stufigen Likert-Skala.
 
 ## Zusammenhangshypothesen
 1. Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
