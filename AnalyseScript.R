@@ -189,7 +189,7 @@ ggplot() +
     subtitle = 'Boxplot zum Diskriminierungsempfinden abhängig vom Geschlecht') +
   theme_gray()
 
-ggsave("Boxplot Unterschiedshypothese 3.jpeg", width = 8, height = 6)
+#ggsave("Boxplot Unterschiedshypothese 3.jpeg", width = 8, height = 6)
 
 #### Zusammenhangshypothese 1: Nutzung und Wahrnehmung
 ## H1: Es besteht ein Zusammenhang zwischen der Nutzung sozialer Netzwerke und der Wahrnehmung von geschlechtsspezifischen Werbebeiträgen.
@@ -287,9 +287,11 @@ data %>%
   group_by(bildung) %>% 
   summarise(count = n()/dim(data)[1]) %>% 
   ggplot() +
-  aes(x=bildung, y=count) + geom_col() + 
+  aes(x=bildung, y=count, label = percent(count)) +
+  geom_col() + 
   scale_y_continuous(limits=c(0,1),
                      label = scales::percent_format(accuracy = 1)) +
+  geom_text(size = 5, position = position_stack(vjust = 1.7)) +
 labs(title = 'Die meisten Probanden haben einen Studienabschluss',
      x = 'Höchster Bildungsabschluss',
      y = 'Häufigkeit',
