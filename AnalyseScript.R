@@ -308,7 +308,7 @@ pie(table(data$bildung), labels=c("Berufsausbildung", "Abitur o.Ä.", "Hauptschu
   
 
 
-#ggsave("Balkendiagramm Bildung.jpeg", width = 8, height = 6)
+ggsave("Balkendiagramm Bildung.jpeg", width = 8, height = 6)
 
 
 rwthcolor <- hcictools::rwth.colorpalette()
