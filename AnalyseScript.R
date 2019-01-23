@@ -281,9 +281,11 @@ rwthcolor <- hcictools::rwth.colorpalette()
 library(ggplot2)
 library(forcats)
 library(dbplyr)
+library(plyr)
+
 
 data %>% 
-  filter(bildung != "Keine Angabe") %>% 
+   filter(bildung != "Keine Angabe") %>% 
   group_by(bildung) %>% 
   summarise(count = n()/dim(data)[1]) %>% 
   ggplot() +
@@ -299,9 +301,16 @@ labs(title = 'Die meisten Probanden haben einen Studienabschluss',
      subtitle = 'Säulendiagramm nach höchstem Bildungsabschluss') + 
   theme_gray() 
 
+rlang::last_error()
+
+pie(table(data$bildung), labels=c("Berufsausbildung", "Abitur o.Ä.", "Hauptschulabschluss", "Realschulabschluss",
+                                  "Sonstiges", "Studienabschluss"), col = c("green1", "red3", "black", "yellow", "blue", "white")) 
+  
+
+
 ggsave("Balkendiagramm Bildung.jpeg", width = 8, height = 6)
 
-library(ggplot2)
+
 rwthcolor <- hcictools::rwth.colorpalette()
 
 data %>% 
